@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## users
 
-* Ruby version
+|Column                  |Type     |Options                    |
+|------------------------|---------|---------------------------|
+| nickname               | string  | null: false               |
+| email                  | string  | null: false, unique: true |
+| encrypted_password     | string  | null: false               |
+| profile                | text    | null: false               |
 
-* System dependencies
+### Association
+- has_many :favorite_things
+- has_many :comments
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+## favorite_things
 
-* How to run the test suite
+|Column              |Type        |Options                         |
+|--------------------|------------|--------------------------------|
+| title              | string     | null: false,                   |
+| reason             | string     | null: false                    |
+| emotion            | string     | null: false                    |
+| appeal_point       | string     | null: false                    |
+| episode            | text       | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- belongs_to :user
+- has_many :comments
 
-* Deployment instructions
 
-* ...
+
+## comments
+
+|Column              |Type        |Options                         |
+|--------------------|------------|--------------------------------|
+| user               | references | null: false, foreign_key: true |
+| favorite_thing     | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :favorite_thing
+
+
+
