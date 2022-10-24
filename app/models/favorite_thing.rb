@@ -8,5 +8,4 @@ class FavoriteThing < ApplicationRecord
     validates :episode
     validates :image
   end
-
 end

@@ -18,8 +18,10 @@ class FavoriteThingsController < ApplicationController
   end
 
   private
+
   def favorite_thing_params
-    params.require(:favorite_thing).permit(:title, :reason, :emotion, :appeal_point, :episode, :image).merge(user_id: current_user.id)
+    params.require(:favorite_thing).permit(:title, :reason, :emotion, :appeal_point, :episode,
+                                           :image).merge(user_id: current_user.id)
   end
 
   def move_to_index
