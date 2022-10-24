@@ -1,14 +1,9 @@
 <% if resource.errors.any? %>
   <div id="error_explanation", class="error_massages">
-    <h2>
-      <%= I18n.t("errors.messages.not_saved",
-                 count: resource.errors.count,
-                 resource: resource.class.model_name.human.downcase)
-       %>
-    </h2>
     <ul>
+      <img src="https://img.icons8.com/color/48/000000/box-important--v1.png"/>
       <% resource.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li>・<%= message %></li>
       <% end %>
     </ul>
   </div>

@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード 
+        profile: プロフィール
+  errors:
+    messages:
+      not_saved: "入力に問題があります"
+  devise:
+    failure:
+      user:
+        invalid: "・Eメールとパスワードが不正な値です"
+        not_found_in_database: "・パスワードが間違っています"
