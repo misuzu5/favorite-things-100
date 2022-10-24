@@ -1,4 +1,5 @@
 <%= form_with model: @favorite_thing, local: true do |f|%>
+  <%= render 'shared/error_messages', model: f.object %>
   <div class="field">
     <%= f.label :title, "好きなもののタイトル" %>
       <span class="indispensable">必須</span><br/>

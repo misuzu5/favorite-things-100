@@ -212,6 +212,10 @@ textarea:focus {
   background-color: #d3d2d3;
 }
 
+.error-message {
+  color: red;
+}
+
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);

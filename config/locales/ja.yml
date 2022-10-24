@@ -8,6 +8,11 @@ ja:
         email: メールアドレス
         password: パスワード 
         profile: プロフィール
+      favorite_thing:
+        title: 好きなもののタイトル
+        reason: 好きな理由
+        episode: エピソード
+        image: イメージ画像
   errors:
     messages:
       not_saved: "入力に問題があります"
