@@ -9,4 +9,6 @@ class User < ApplicationRecord
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'は半角英数を両方含む必要があります'
+
+  has_many :favorite_things
 end

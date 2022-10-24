@@ -202,6 +202,20 @@ textarea:focus {
   border-radius: 5px;
 }
 
+/* 投稿ページ */
+.dispensable {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgb(77, 77, 77);
+  border-radius: 3px;
+  padding: 2px;
+  background-color: #d3d2d3;
+}
+
+.error-message {
+  color: red;
+}
+
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);

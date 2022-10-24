@@ -22,8 +22,8 @@
 |--------------------|------------|--------------------------------|
 | title              | string     | null: false,                   |
 | reason             | string     | null: false                    |
-| emotion            | string     | null: false                    |
-| appeal_point       | string     | null: false                    |
+| emotion            | string     |                                |
+| appeal_point       | string     |                                |
 | episode            | text       | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
