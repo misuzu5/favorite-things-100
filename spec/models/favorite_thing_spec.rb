@@ -26,25 +26,25 @@ RSpec.describe FavoriteThing, type: :model do
       it 'titleが空では投稿できない' do
         @favorite_thing.title = nil
         @favorite_thing.valid?
-        expect(@favorite_thing.errors.full_messages).to include("好きなもののタイトルを入力してください")
+        expect(@favorite_thing.errors.full_messages).to include('好きなもののタイトルを入力してください')
       end
 
       it 'reasonが空では投稿できない' do
         @favorite_thing.reason = nil
         @favorite_thing.valid?
-        expect(@favorite_thing.errors.full_messages).to include("好きな理由を入力してください")
+        expect(@favorite_thing.errors.full_messages).to include('好きな理由を入力してください')
       end
 
       it 'episodeが空では投稿できない' do
         @favorite_thing.episode = nil
         @favorite_thing.valid?
-        expect(@favorite_thing.errors.full_messages).to include("エピソードを入力してください")
+        expect(@favorite_thing.errors.full_messages).to include('エピソードを入力してください')
       end
 
       it 'imageがないと出品できない' do
         @favorite_thing.image = nil
         @favorite_thing.valid?
-        expect(@favorite_thing.errors.full_messages).to include("イメージ画像を入力してください")
+        expect(@favorite_thing.errors.full_messages).to include('イメージ画像を入力してください')
       end
 
       it 'ユーザーが紐付いていないと商品の出品できない' do
