@@ -18,6 +18,10 @@ class FavoriteThingsController < ApplicationController
     end
   end
 
+  def show
+    @favorite_thing = FavoriteThing.find(params[:id])
+  end
+
   private
 
   def favorite_thing_params

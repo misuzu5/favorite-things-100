@@ -1,7 +1,7 @@
 <div class="card">
-  <%= link_to image_tag(favorite_thing.image, class: :card__img ), root_path %>
+  <%= link_to image_tag(favorite_thing.image, class: :card__img ), favorite_thing_path(favorite_thing) %>
   <div class="card__body">
-    <%= link_to favorite_thing.title, root_path, class: :card__title%>
+    <%= link_to favorite_thing.title, favorite_thing_path(favorite_thing), class: :card__title%>
     <p class="card__summary">
       <%= favorite_thing.reason %>
     </p>
