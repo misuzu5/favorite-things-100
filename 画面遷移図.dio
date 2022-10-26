@@ -43,13 +43,13 @@
                 <mxCell id="77" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="33" target="34" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="92" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="33" target="35">
+                <mxCell id="92" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="33" target="35" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="33" value="詳細ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fontColor=#000000;fillColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="240" y="270" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="89" style="edgeStyle=none;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="34" target="33">
+                <mxCell id="89" style="edgeStyle=none;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="34" target="33" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="34" value="編集ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fontColor=#000000;fillColor=#FFFFFF;shadow=0;strokeColor=default;" parent="1" vertex="1">
@@ -80,8 +80,17 @@
                 <mxCell id="61" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="55" target="33" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="94" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.357;entryY=-0.137;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="55" target="lfoe9GVDVp2srDrckdQu-92">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="55" value="マイページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fontColor=#000000;fillColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="80" y="270" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.69;entryY=1.088;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="lfoe9GVDVp2srDrckdQu-92" target="55">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lfoe9GVDVp2srDrckdQu-92" value="ユーザー情報編集ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fontColor=#000000;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="360" width="140" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
