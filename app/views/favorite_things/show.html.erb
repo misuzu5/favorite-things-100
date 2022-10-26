@@ -8,7 +8,7 @@
       <% if current_user == @favorite_thing.user%>
         <div class="favorite-thing__manage">
           <%= link_to "編集する", edit_favorite_thing_path(@favorite_thing), class: :favorite_thing__btn %>
-          <%= link_to "削除する", root_path, method: :delete, class: :favorite_thing__btn %>
+          <%= link_to "削除する", favorite_thing_path(@favorite_thing), method: :delete, class: :favorite_thing__btn %>
         </div>
       <% end %>
       <div class="favorite-thing__image">
