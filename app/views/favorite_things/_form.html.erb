@@ -37,6 +37,11 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
+    <%= f.submit "保存する", class: :form__btn  %><br>
+    <% if current_user.id == @favorite_thing.user_id %>
+      <%=link_to 'もどる', favorite_thing_path(@favorite_thing.id), class:"back-btn" %>
+    <% else %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    <% end %>
   </div>
 <% end %>
