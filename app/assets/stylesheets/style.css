@@ -127,6 +127,11 @@ a {
 .greeting__link{
   text-decoration: underline;
 }
+
+.user__page {
+  display: flex;
+}
+
 .page-heading {
   font-size: 30px;
   margin-bottom: 28px;
@@ -406,6 +411,12 @@ div.contents.row .success .btn :hover {
   justify-content: space-between;
   align-items: center;
 }
+
+.user__manage{
+  display: block;
+  justify-content: left;
+}
+
 /* フッター */
 
 .footer {
