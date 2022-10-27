@@ -3,7 +3,6 @@ class FavoriteThingsController < ApplicationController
   before_action :set_favorite_thing, except: [:index, :new, :create]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
-
   def index
     @favorite_things = FavoriteThing.includes(:user).order('created_at DESC')
   end
