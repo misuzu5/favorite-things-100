@@ -415,6 +415,7 @@ div.contents.row .success .btn :hover {
 .user__manage{
   display: block;
   justify-content: left;
+  margin-top: 20px;
 }
 
 /* フッター */

@@ -4,7 +4,7 @@
       <p class="favorite-thing__hedding">
         <%= @favorite_thing.title %>
       </p>
-      <%= link_to "by #{@favorite_thing.user.nickname}", root_path, class: :favorite_thing__user %>
+      <%= link_to "by #{@favorite_thing.user.nickname}", user_path(@favorite_thing.user), class: :favorite_thing__user %>
       <% if current_user == @favorite_thing.user%>
         <div class="favorite-thing__manage">
           <%= link_to "編集する", edit_favorite_thing_path(@favorite_thing), class: :favorite_thing__btn %>
