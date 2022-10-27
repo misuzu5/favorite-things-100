@@ -1,0 +1,36 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <div class="user__page">
+        <h2 class="page-heading">
+          <%= "#{@user.nickname}さんの情報"%>
+        </h2>
+
+        <% if current_user == @user%>
+          <div class="user__manage">
+            <%= link_to "編集・削除", edit_user_registration_path(@user), class: :favorite_thing__btn %>
+          </div>
+        <% end %>
+      </div>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">名前</th>
+            <td class="table__col2"><%= @user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">プロフィール</th>
+            <td class="table__col2"><%= @user.profile %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんの好きなもの一覧"%>
+      </h2>
+      <div class="user__card">
+        <%= render partial: 'favorite_things/favorite_thing', collection: @user.favorite_things %>
+      </div>
+    </div>
+  </div>
+</div>

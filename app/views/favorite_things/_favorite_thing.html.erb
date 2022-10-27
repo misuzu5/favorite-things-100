@@ -5,6 +5,6 @@
     <p class="card__summary">
       <%= favorite_thing.reason %>
     </p>
-    <%= link_to "by #{favorite_thing.user.nickname}", root_path, class: :card__user %>
+    <%= link_to "by #{favorite_thing.user.nickname}", user_path(favorite_thing.user), class: :card__user %>
   </div>
 </div>
