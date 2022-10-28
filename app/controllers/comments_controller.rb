@@ -6,11 +6,12 @@ class CommentsController < ApplicationController
     else
       @favorite_thing = @comment.favorite_thing
       @comments = @favorite_thing.comments
-      render "favorite_things/show"
+      render 'favorite_things/show'
     end
   end
 
   private
+
   def comment_params
     params.require(:comment).permit(:text).merge(user_id: current_user.id, favorite_thing_id: params[:favorite_thing_id])
   end
