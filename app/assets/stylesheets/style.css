@@ -83,6 +83,18 @@ a {
   opacity: 0.5;
 }
 
+.nav__name{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.9em;
+  color: #f43464;
+  text-decoration: none;
+  user-select: none;
+}
+.nav__name:hover{
+  opacity: 0.5;
+}
+
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
@@ -336,6 +348,7 @@ textarea:focus {
 }
 
 .comments_list{
+  display: flex;
   list-style-type: square;
   padding-bottom: 5px;
 }

@@ -37,6 +37,7 @@
 
 |Column              |Type        |Options                         |
 |--------------------|------------|--------------------------------|
+| episode            | text       | null: false                    |
 | user               | references | null: false, foreign_key: true |
 | favorite_thing     | references | null: false, foreign_key: true |
 
