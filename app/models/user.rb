@@ -11,4 +11,5 @@ class User < ApplicationRecord
   validates_format_of :password, allow_blank: true, with: PASSWORD_REGEX, message: 'は半角英数を両方含む必要があります'
 
   has_many :favorite_things, dependent: :destroy
+  has_many :comments
 end
