@@ -1,4 +1,7 @@
 ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
   activerecord:
     models:
       user: ユーザー
@@ -13,6 +16,8 @@ ja:
         reason: 好きな理由
         episode: エピソード
         image: イメージ画像
+      comment:
+        text: コメント
   errors:
     messages:
       not_saved: "入力に問題があります"

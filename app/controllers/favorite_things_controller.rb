@@ -21,6 +21,8 @@ class FavoriteThingsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @favorite_thing.comments.includes(:favorite_thing).order('created_at DESC')
   end
 
   def edit
