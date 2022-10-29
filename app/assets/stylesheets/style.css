@@ -418,6 +418,24 @@ div.contents.row .success .btn :hover {
   width: 70%;
   padding: 16px 8px;
 }
+.list{
+  border-collapse: collapse;
+  width: 50%;
+}
+.list__col1{
+  text-align: left;
+  font-weight: bold;
+  background: #f06789;
+  border-collapse: collapse;
+  border: 1px solid #f7e0e4;
+  width: 5%;
+}
+.list__col2{
+  text-align: left;
+  border: 1px solid #f7e0e4;
+  border-collapse: collapse;
+  width: 70%;
+}
 .user__card {
   display: flex;
   flex-wrap: wrap;
