@@ -40,7 +40,6 @@ a {
   background-color: #f7e0e4;
   margin-bottom: 48px;
   /* padding: 20px 0; */
-
 }
 .inner {
   width: 1024px;
@@ -55,7 +54,7 @@ a {
 .logo {
   width: 200px;
 }
-.nav__btn{
+.nav__btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -66,12 +65,12 @@ a {
   border-radius: 3px;
   transition: 0.4s ease;
 }
-.nav__btn:hover{
+.nav__btn:hover {
   color: #fff;
   background: #f43464;
 }
 
-.nav__logout{
+.nav__logout {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -79,11 +78,11 @@ a {
   text-decoration: none;
   user-select: none;
 }
-.nav__logout:hover{
+.nav__logout:hover {
   opacity: 0.5;
 }
 
-.nav__name{
+.nav__name {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.9em;
@@ -91,12 +90,12 @@ a {
   text-decoration: none;
   user-select: none;
 }
-.nav__name:hover{
+.nav__name:hover {
   opacity: 0.5;
 }
 
 /* フォーム周り */
-.form__wrapper{
+.form__wrapper {
   min-height: calc(100vh - 161px);
 }
 
@@ -104,15 +103,15 @@ a {
   width: 50%;
 }
 
-.field{
+.field {
   margin: 10px 0;
 }
 
-.actions{
+.actions {
   margin-bottom: 40px;
 }
 
-.form__btn{
+.form__btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -133,10 +132,10 @@ a {
 
 /* メイン */
 
-.greeting{
+.greeting {
   margin-bottom: 20px;
 }
-.greeting__link{
+.greeting__link {
   text-decoration: underline;
 }
 
@@ -255,20 +254,20 @@ textarea:focus {
 
 /* 一覧ページ */
 .favorite-thing-contents {
-  background-color: #FFF;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10vh 0;
 }
 
-.favorite-thing-contents>.title {
+.favorite-thing-contents > .title {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
 }
 
-.favorite-thing-contents>.subtitle {
+.favorite-thing-contents > .subtitle {
   font-size: 3vh;
   margin: 1vh 0;
   text-decoration: none;
@@ -283,44 +282,43 @@ textarea:focus {
   justify-content: center;
 }
 
-
 /* 詳細ページ */
-.favorite-thing__wrapper{
+.favorite-thing__wrapper {
   min-height: calc(100vh - 161px);
 }
-.favorite-thing__hedding{
+.favorite-thing__hedding {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
-.favorite_thing__user{
+.favorite_thing__user {
   display: block;
   font-size: 16px;
   color: #999;
   text-align: center;
   text-decoration: underline;
 }
-.favorite-thing__image{
+.favorite-thing__image {
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
 }
-.favorite-thing__detail{
+.favorite-thing__detail {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 8px;
 }
-.detail__title{
+.detail__title {
   font-size: 20px;
   font-weight: bold;
 }
-.favorite-thing__manage{
+.favorite-thing__manage {
   display: flex;
   justify-content: center;
   padding-top: 16px;
 }
-.favorite_thing__btn{
+.favorite_thing__btn {
   display: block;
   padding: 0.4em 1.6em;
   font-size: 0.4em;
@@ -332,28 +330,28 @@ textarea:focus {
   transition: 0.4s ease;
   margin: 0 4px;
 }
-.favorite-thing__btn:hover{
+.favorite-thing__btn:hover {
   color: #fff;
   background: #999;
 }
 
-.favorite-thing__comments{
+.favorite-thing__comments {
   background-color: #f6f6f6;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
 
-.comments_lists{
+.comments_lists {
   padding-left: 20px;
 }
 
-.comments_list{
+.comments_list {
   display: flex;
   list-style-type: square;
   padding-bottom: 5px;
 }
 
-.comment_user{
+.comment_user {
   font-size: 16px;
   color: #999;
   text-decoration: underline;
@@ -394,15 +392,15 @@ div.contents.row .success .btn :hover {
 }
 
 /* ユーザーページ */
-.user__wrapper{
+.user__wrapper {
   min-height: calc(100vh - 161px);
 }
-.table{
+.table {
   border-collapse: collapse;
   margin-bottom: 32px;
   width: 50%;
 }
-.table__col1{
+.table__col1 {
   text-align: left;
   font-weight: bold;
   background: #fafafa;
@@ -411,18 +409,18 @@ div.contents.row .success .btn :hover {
   width: 30%;
   padding: 8px;
 }
-.table__col2{
+.table__col2 {
   text-align: left;
   border: 1px solid #f5f5f5;
   border-collapse: collapse;
   width: 70%;
   padding: 16px 8px;
 }
-.list{
+.list {
   border-collapse: collapse;
   width: 50%;
 }
-.list__col1{
+.list__col1 {
   text-align: left;
   font-weight: bold;
   background: #f06789;
@@ -430,7 +428,7 @@ div.contents.row .success .btn :hover {
   border: 1px solid #f7e0e4;
   width: 5%;
 }
-.list__col2{
+.list__col2 {
   text-align: left;
   border: 1px solid #f7e0e4;
   border-collapse: collapse;
@@ -443,7 +441,7 @@ div.contents.row .success .btn :hover {
   align-items: center;
 }
 
-.user__manage{
+.user__manage {
   display: block;
   justify-content: left;
   margin-top: 20px;
@@ -474,12 +472,12 @@ div.contents.row .success .btn :hover {
     width: 48%;
     margin-bottom: 40px;
   }
-  .favorite-thing_image{
+  .favorite-thing_image {
     width: 60%;
   }
 }
 
- /* スマホ表示 */
+/* スマホ表示 */
 @media (max-width: 599px) {
   .logo {
     width: 120px;
@@ -497,10 +495,10 @@ div.contents.row .success .btn :hover {
   .card__summary {
     font-size: 14px;
   }
-  .favorite-thing_image{
+  .favorite-thing_image {
     width: 100%;
   }
-  .table{
+  .table {
     width: 100%;
   }
 }
