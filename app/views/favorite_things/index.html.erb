@@ -1,28 +1,374 @@
-<main class="main">
-  <div class="inner">
-    <% if user_signed_in? %>
-      <div class="greeting">
-        こんにちは！
-        <%= link_to "#{current_user.nickname}さん", user_path(current_user), class: :greeting__link%>
-      </div>
-    <% end %>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>FavoriteThings100</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 
-    <div class='favorite-thing-contents'>
-      <h2 class='title'>ピックアップカテゴリー</h2>
-      <div class="subtitle" >
-        みんなの好きなもの
-      </div>
-      <div class='favorite-thing-lists'>
-        <div class="card__wrapper">
-          <%= render partial: 'favorite_thing', collection: @favorite_things %>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+  </head>
+  
+  <body>
+    <%# <header>
+      <nav class="navbar navbar-expand-md fixed-top" style="background-color: #f7e0e4;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="root_path">FavoriteThings100</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">ログイン</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">新規登録</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
+      </nav>
+    </header> %>
+
+    <main>
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-xl-1">
+              </div>
+              <div class="col-xl-10">
+                <img src="https://cdn.pixabay.com/photo/2014/07/02/09/29/images-382008_1280.jpg" class="d-block w-100">
+              </div>
+              <div class="col-xl-1">
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>好きなもの100個あげてみよう!</h1>
+                <p>What's your favorite things? Let's give 100!!</p>
+                <p><a class="btn btn-lg btn-danger" href="#">投稿する</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-xl-1">
+              </div>
+              <div class="col-xl-10">
+                <img src="https://image.shutterstock.com/shutterstock/photos/1331831171/display_1500/stock-vector-hand-drawn-infographic-for-mind-map-visualization-template-with-light-bulb-as-a-main-symbol-1331831171.jpg" class="d-block w-100">
+              </div>
+              <div class="col-xl-1">
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>自己分析してみよう!</h1>
+                <p>Let's do a self-analysis.There may be new discoveries.</p>
+                <p><a class="btn btn-lg btn-danger" href="#">マイページへ</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-xl-1">
+              </div>
+              <div class="col-xl-10">
+                <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="d-block w-100">
+              </div>
+              <div class="col-xl-1">
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>他の人の好きなものも見てみよう!</h1>
+                <p>What do other people like? See what other people like.</p>
+                <p><a class="btn btn-lg btn-danger" href="#">一覧ページへ</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
-  </div>
-  <%= link_to(new_favorite_thing_path, class: 'post-btn') do %>
-    <span class='post-btn-text'>投稿する</span>
-    <%= image_tag '指ハート.png' , size: '185x50' ,class: "post-btn-icon" %>
-  <% end %>
-</main>
 
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
 
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+
+        <div class="row align-items-md-stretch">
+          <div class="col-md-6">
+            <div class="h-100 p-5 text-black bg-info border rounded-3">
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="interview">
+                    <h6>面接って緊張しますよね...</h6>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="interview">
+                    <h6>(...)</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-3">
+                  <%= image_tag '社長のアイコン.png' , size: '80x80' %>
+                  <div class="interview-font">自己紹介を<br>してください</div>
+                </div>
+
+                <div class="col-md-3">
+                  <%= image_tag 'サラリーマン.png' , size: '80x80' %>
+                  <div class="interview-font">強みは<br>なんですか？</div>
+                </div>
+
+                <div class="col-md-3">
+                  <%= image_tag 'お団子あたまのキャリアウーマン.png' , size: '80x80' %>
+                  <div class="interview-font">将来の<br>ビジョンは？</div>
+                </div>
+
+                <div class="col-md-3">
+                  <%= image_tag 'コミュニケーションアイコン3.png' , size: '80x80' %>
+                  <div class="interview-font">えっと...</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="h-100 p-5 bg-warning border rounded-3">
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="question">
+                    <h6>でも、こう聞かれたら？</h6>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="question">
+                    <h6>(*ﾟ∀ﾟ*)</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-3">
+                <%= image_tag 'サーフィンアイコン1.png' , size: '80x80' %>
+                  <div class="interview-font">趣味ある？<br>何が好き？</div>
+                </div>
+
+                <div class="col-md-3">
+                <%= image_tag 'チアリーダーのピクトグラム.png' , size: '80x80' %>
+                  <div class="interview-font">何してる時が<br>楽しい？</div>
+                </div>
+
+                <div class="col-md-3">
+                <%= image_tag 'ミュージシャンアイコン.png' , size: '80x80' %>
+                  <div class="interview-font">次の休日は<br>何するの？</div>
+                </div>
+
+                <div class="col-md-3">
+                <%= image_tag 'しゃべる人の無料アイコン.png' , size: '80x80' %>
+                  <div class="interview-font">最近〇〇に<br>ハマってて〜</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <br>
+        <br>
+
+        <div class="row mb-2">
+          <div class="col-md-12">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col-auto d-none d-lg-block">
+                <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" width="200" height="250">
+              </div>
+
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-danger">投稿する</strong>
+                <h3 class="mb-0">まずは自分のことを知るために、好きなものをピックアップしてみよう！</h3>
+                <br>
+                <p class="card-text mb-auto">好きなものの理由を５つ考えます。<br>新しい発見があるかも！</p>
+                <a href="#" class="stretched-link">マイページ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='favorite-thing-contents'>
+          <h2 class='title'>ピックアップカテゴリー</h2>
+          <div class="subtitle" >
+            みんなの好きなもの
+          </div>
+          <div class='favorite-thing-lists'>
+            <div class="card__wrapper">
+              <%= render partial: 'favorite_thing', collection: @favorite_things %>
+            </div>
+          </div>
+        </div>
+        <%# <!-- START THE FEATURETTES -->
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+              <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            </div>
+            <div class="col-md-5">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+              <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+              <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+            </div>
+            <div class="col-md-5">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES --> %>
+      </div>
+
+      <!-- /.row -->
+      <%# <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES --> %>
+      
+      <!-- /.container -->
+      <!-- FOOTER -->
+      <%# <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer> %>
+    </main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
