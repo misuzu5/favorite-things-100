@@ -97,6 +97,7 @@ a {
 /* フォーム周り */
 .form__wrapper {
   min-height: calc(100vh - 161px);
+  text-align: center;
 }
 
 .form__text {
@@ -217,6 +218,11 @@ textarea:focus {
   outline: none;
   border: 2px solid #f06789;
   border-radius: 5px;
+}
+
+.bi-door-open-fill {
+  font-size:50px;
+  color: #f43464;
 }
 
 /* 投稿ページ */
