@@ -1,52 +1,67 @@
 <main class="main">
   <div class="inner">
     <div class="favorite-thing__wrapper">
-      <p class="favorite-thing__hedding">
-        <%= @favorite_thing.title %>
-      </p>
-      <%= link_to "by #{@favorite_thing.user.nickname}", user_path(@favorite_thing.user), class: :favorite_thing__user %>
-      <% if current_user == @favorite_thing.user%>
-        <div class="favorite-thing__manage">
-          <%= link_to "編集する", edit_favorite_thing_path(@favorite_thing), class: :favorite_thing__btn %>
-          <%= link_to "削除する", favorite_thing_path(@favorite_thing), method: :delete, class: :favorite_thing__btn %>
+        <div class="row align-items-md-stretch">
+          <div class="col-md-6">
+            <div class="h-100 p-5">
+              <div class="col-auto d-lg-block">
+                <%= image_tag @favorite_thing.image %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="h-auto p-5 text-black bg-light ">
+             <div class="d-flex justify-content-between border-bottom">
+                <h3 strong class="d-inline-block "><%= @favorite_thing.title %></h3>
+
+                <% if current_user == @favorite_thing.user%>
+                  <div class="favorite-thing__manage">
+                    <%= link_to "編集する", edit_favorite_thing_path(@favorite_thing), class: :favorite_thing__btn %>
+                    <%= link_to "削除する", favorite_thing_path(@favorite_thing), method: :delete, class: :favorite_thing__btn %>
+                  </div>
+                <% end %>
+              </div>
+
+                <div class="favorite-thing__body">
+                  <div class="favorite-thing__detail">
+                    <p class="detail__title">好きな理由</p>
+                    <p class="detail__message">
+                      <%= @favorite_thing.reason %>
+                    </p>
+                  </div>
+                  <div class="favorite-thing__detail">
+                    <p class="detail__title">思い入れ</p>
+                    <p class="detail__message">
+                      <%= @favorite_thing.emotion %>
+                    </p>
+                  </div>
+                  <div class="favorite-thing__detail">
+                    <p class="detail__title">アピールポイント</p>
+                    <p class="detail__message">
+                      <%= @favorite_thing.appeal_point %>
+                    </p>
+                  </div>
+                  <div class="favorite-thing__detail">
+                    <p class="detail__title">エピソード</p>
+                    <p class="detail__message">
+                      <%= @favorite_thing.episode %>
+                    </p>
+                  </div>
+                </div>
+
+                <%= link_to "by #{@favorite_thing.user.nickname}", user_path(@favorite_thing.user), class: :favorite_thing__user %>
+            </div>
+          </div>
         </div>
-      <% end %>
-      <div class="favorite-thing__image">
-        <%= image_tag @favorite_thing.image %>
-      </div>
-      <div class="favorite-thing__body">
-        <div class="favorite-thing__detail">
-          <p class="detail__title">好きな理由</p>
-          <p class="detail__message">
-            <%= @favorite_thing.reason %>
-          </p>
-        </div>
-        <div class="favorite-thing__detail">
-          <p class="detail__title">思い入れ</p>
-          <p class="detail__message">
-            <%= @favorite_thing.emotion %>
-          </p>
-        </div>
-        <div class="favorite-thing__detail">
-          <p class="detail__title">アピールポイント</p>
-          <p class="detail__message">
-            <%= @favorite_thing.appeal_point %>
-          </p>
-        </div>
-        <div class="favorite-thing__detail">
-          <p class="detail__title">エピソード</p>
-          <p class="detail__message">
-            <%= @favorite_thing.episode %>
-          </p>
-        </div>
-      </div>
+
       <div class="favorite-thing__comments">
         <% if user_signed_in? %>
           <%= form_with model: [@favorite_thing, @comment], local: true do |f|%>
           <%= render 'shared/error_messages', model: f.object %>
             <div class="field">
-              <%= f.label :text, "コメント"%><br />
-              <%= f.text_area :text, id:"comment_text", cols:"60" %>
+              <%= f.label :text, "コメント："%><br />
+              <%= f.text_area :text, id:"comment_text", cols: :auto%>
             </div>
             <div class="actions">
               <%= f.submit "送信する", class: :form__btn %>

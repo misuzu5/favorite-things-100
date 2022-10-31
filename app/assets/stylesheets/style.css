@@ -55,6 +55,9 @@ a {
 
 .logo {
   width: 200px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
 }
 .nav__btn {
   display: inline-block;
@@ -176,6 +179,7 @@ a {
   font-size: 20px;
   margin-bottom: 8px;
   font-weight: bold;
+  color: #f06789;
 }
 .card__summary {
   font-size: 16px;
@@ -321,7 +325,7 @@ textarea:focus {
   font-weight: bold;
   margin-bottom: 5vh;
   position: relative;
-  background-color: lightgoldenrodyellow;
+  background-color: #f7e0e4;
 }
 
 /* 詳細ページ */
@@ -337,7 +341,7 @@ textarea:focus {
   display: block;
   font-size: 16px;
   color: #999;
-  text-align: center;
+  text-align: right;
   text-decoration: underline;
 }
 .favorite-thing__image {
@@ -347,18 +351,19 @@ textarea:focus {
 }
 .favorite-thing__detail {
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   margin-bottom: 8px;
 }
 .detail__title {
   font-size: 20px;
   font-weight: bold;
+  padding-top: 10px;
 }
 .favorite-thing__manage {
   display: flex;
-  justify-content: center;
-  padding-top: 16px;
+  justify-content: right;
+  padding-bottom: 16px;
 }
 .favorite_thing__btn {
   display: block;
@@ -536,6 +541,10 @@ div.contents.row .success .btn :hover {
   }
   .card__summary {
     font-size: 14px;
+  }
+  .card-border-none {
+    width: calc((100% - 50px) / 3);
+    margin-bottom: 40px;
   }
   .favorite-thing_image {
     width: 100%;
