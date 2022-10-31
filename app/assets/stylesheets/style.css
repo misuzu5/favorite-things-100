@@ -164,7 +164,7 @@ a {
   min-height: calc(100vh - 161px);
   margin: 0 60px
 }
-.card {
+.card-border-none {
   width: calc((100% - 50px) / 6);
   margin-bottom: 40px;
 }
