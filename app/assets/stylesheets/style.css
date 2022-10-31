@@ -55,6 +55,9 @@ a {
 
 .logo {
   width: 200px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
 }
 .nav__btn {
   display: inline-block;
@@ -538,6 +541,10 @@ div.contents.row .success .btn :hover {
   }
   .card__summary {
     font-size: 14px;
+  }
+  .card-border-none {
+    width: calc((100% - 50px) / 3);
+    margin-bottom: 40px;
   }
   .favorite-thing_image {
     width: 100%;

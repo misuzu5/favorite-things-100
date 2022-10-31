@@ -71,7 +71,7 @@
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
 
-        <div class="carousel-inner">
+        <div class="carousel-inner bg-warning">
           <div class="carousel-item active">
             <div class="row">
               <div class="col-xl-1">
@@ -165,13 +165,13 @@
           <div class="col-md-6">
             <div class="h-100 p-5 text-black bg-light border rounded-3">
               <div class="row">
-                <div class="col-md-9">
+                <div class="col-9">
                   <div class="interview">
                     <h6>緊張する面接...</h6>
                   </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-3">
                   <div class="interview">
                     <h6>(...)</h6>
                   </div>
@@ -180,22 +180,22 @@
 
               <div class="row">
 
-                <div class="col-md-3">
+                <div class="col-3">
                   <%= image_tag '社長のアイコン.png' , size: '80x80' %>
                   <div class="interview-font">自己紹介を<br>してください</div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-3">
                   <%= image_tag 'サラリーマン.png' , size: '80x80' %>
                   <div class="interview-font">強みは<br>なんですか？</div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-3">
                   <%= image_tag 'お団子あたまのキャリアウーマン.png' , size: '80x80' %>
                   <div class="interview-font">将来の<br>ビジョンは？</div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-3">
                   <%= image_tag 'コミュニケーションアイコン3.png' , size: '80x80' %>
                   <div class="interview-font">えっと...</div>
                 </div>
@@ -207,13 +207,13 @@
           <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3">
               <div class="row">
-                <div class="col-md-9">
+                <div class="col-9">
                   <div class="question">
                     <h6>でも、こう聞かれたら？</h6>
                   </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-3">
                   <div class="question">
                     <h6>(*ﾟ∀ﾟ*)</h6>
                   </div>
@@ -222,22 +222,22 @@
 
               <div class="row">
 
-                <div class="col-md-3">
+                <div class="col-3">
                 <%= image_tag 'サーフィンアイコン1.png' , size: '80x80' %>
                   <div class="interview-font">趣味ある？<br>何が好き？</div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-3">
                 <%= image_tag '会話アイコン.png' , size: '80x80' %>
                   <div class="interview-font">何してる時が<br>楽しい？</div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-3">
                 <%= image_tag 'マッチョアイコン2.png' , size: '80x80' %>
                   <div class="interview-font">次の休日は<br>何するの？</div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-3">
                 <%= image_tag 'うれしい.png' , size: '60x60' %>
                   <div class="interview-font">最近〇〇に<br>ハマってて</div>
                 </div>
@@ -254,7 +254,7 @@
         <div class="row mb-2">
           <div class="col-md-12">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col-auto d-none d-lg-block">
+              <div class="col-auto d-lg-block">
                 <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" width="200" height="250">
               </div>
 
@@ -275,9 +275,9 @@
             みんなの好きなもの
           </div>
           <div class='favorite-thing-lists'>
-            <div class="card__wrapper">
+            <%# <div class="card__wrapper"> %>
               <%= render partial: 'favorite_thing', collection: @favorite_things %>
-            </div>
+            <%# </div> %>
           </div>
         </div>
         <%# <!-- START THE FEATURETTES -->
