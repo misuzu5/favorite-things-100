@@ -338,7 +338,7 @@ textarea:focus {
   display: block;
   font-size: 16px;
   color: #999;
-  text-align: center;
+  text-align: right;
   text-decoration: underline;
 }
 .favorite-thing__image {
@@ -348,18 +348,19 @@ textarea:focus {
 }
 .favorite-thing__detail {
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   margin-bottom: 8px;
 }
 .detail__title {
   font-size: 20px;
   font-weight: bold;
+  padding-top: 10px;
 }
 .favorite-thing__manage {
   display: flex;
-  justify-content: center;
-  padding-top: 16px;
+  justify-content: right;
+  padding-bottom: 16px;
 }
 .favorite_thing__btn {
   display: block;
