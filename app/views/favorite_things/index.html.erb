@@ -87,7 +87,7 @@
               <div class="carousel-caption text-start">
                 <h1>好きなもの100個あげてみよう!</h1>
                 <p>What's your favorite things? Let's give 100!!</p>
-                <p><a class="btn btn-lg btn-danger" href="#">投稿する</a></p>
+                <p><a class="btn btn-lg btn-danger" href="/favorite_things/new">投稿する</a></p>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@
               <div class="carousel-caption">
                 <h1>自己分析してみよう!</h1>
                 <p>Let's do a self-analysis.There may be new discoveries.</p>
-                <p><a class="btn btn-lg btn-danger" href="#">マイページへ</a></p>
+                <p><a class="btn btn-lg btn-danger" href="/users/<%= current_user.id %>">マイページへ</a></p>
               </div>
             </div>
           </div>
@@ -159,127 +159,143 @@
             <p class="lead mb-4">徹底的に自分を知ることが、社会を「個」で生き抜く強みになる――「好き」を書き出すことは、自己分析の第一歩ともなるのではないでしょうか。</p>
           </div>
         </div>
+      </div>
 
 
-        <div class="row align-items-md-stretch">
-          <div class="col-md-6">
-            <div class="h-100 p-5 text-black bg-light border rounded-3">
-              <div class="row">
-                <div class="col-9">
-                  <div class="interview">
-                    <h6>緊張する面接...</h6>
+      <div class="carousel-inner bg-light ">
+        <div class="row">
+        
+          <div class="col-1">
+          </div>
+
+          <div class="col-10">
+            <div class="row align-items-md-stretch">
+              <div class="col-md-6">
+                <div class="h-100 p-5 text-black bg-light border rounded-3">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="interview">
+                        <h6>緊張する面接...</h6>
+                      </div>
+                    </div>
+
+                    <div class="col-3">
+                      <div class="interview">
+                        <h6>(...)</h6>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="col-3">
-                  <div class="interview">
-                    <h6>(...)</h6>
+                  <div class="row">
+
+                    <div class="col-3">
+                      <%= image_tag '社長のアイコン.png' , size: '80x80' %>
+                      <div class="interview-font">自己紹介を<br>してください</div>
+                    </div>
+
+                    <div class="col-3">
+                      <%= image_tag 'サラリーマン.png' , size: '80x80' %>
+                      <div class="interview-font">強みは<br>なんですか？</div>
+                    </div>
+
+                    <div class="col-3">
+                      <%= image_tag 'お団子あたまのキャリアウーマン.png' , size: '80x80' %>
+                      <div class="interview-font">将来の<br>ビジョンは？</div>
+                    </div>
+
+                    <div class="col-3">
+                      <%= image_tag 'コミュニケーションアイコン3.png' , size: '80x80' %>
+                      <div class="interview-font">えっと...</div>
+                    </div>
+
                   </div>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="col-md-6">
+                <div class="h-100 p-5 bg-light border rounded-3">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="question">
+                        <h6>でも、こう聞かれたら？</h6>
+                      </div>
+                    </div>
 
-                <div class="col-3">
-                  <%= image_tag '社長のアイコン.png' , size: '80x80' %>
-                  <div class="interview-font">自己紹介を<br>してください</div>
+                    <div class="col-3">
+                      <div class="question">
+                        <h6>(*ﾟ∀ﾟ*)</h6>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-3">
+                    <%= image_tag 'サーフィンアイコン1.png' , size: '80x80' %>
+                      <div class="interview-font">趣味ある？<br>何が好き？</div>
+                    </div>
+
+                    <div class="col-3">
+                    <%= image_tag '会話アイコン.png' , size: '80x80' %>
+                      <div class="interview-font">何してる時が<br>楽しい？</div>
+                    </div>
+
+                    <div class="col-3">
+                    <%= image_tag 'マッチョアイコン2.png' , size: '80x80' %>
+                      <div class="interview-font">次の休日は<br>何するの？</div>
+                    </div>
+
+                    <div class="col-3">
+                    <%= image_tag 'うれしい.png' , size: '60x60' %>
+                      <div class="interview-font">最近〇〇に<br>ハマってて</div>
+                    </div>
+
+                  </div>
                 </div>
-
-                <div class="col-3">
-                  <%= image_tag 'サラリーマン.png' , size: '80x80' %>
-                  <div class="interview-font">強みは<br>なんですか？</div>
-                </div>
-
-                <div class="col-3">
-                  <%= image_tag 'お団子あたまのキャリアウーマン.png' , size: '80x80' %>
-                  <div class="interview-font">将来の<br>ビジョンは？</div>
-                </div>
-
-                <div class="col-3">
-                  <%= image_tag 'コミュニケーションアイコン3.png' , size: '80x80' %>
-                  <div class="interview-font">えっと...</div>
-                </div>
-
               </div>
             </div>
-          </div>
+            <!-- /.row -->
 
-          <div class="col-md-6">
-            <div class="h-100 p-5 bg-light border rounded-3">
-              <div class="row">
-                <div class="col-9">
-                  <div class="question">
-                    <h6>でも、こう聞かれたら？</h6>
+            <br>
+            <br>
+
+            <div class="row mb-2">
+              <div class="col-md-12">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-auto d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" width="200" height="250">
+                  </div>
+
+                  <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-danger">投稿する</strong>
+                    <h3 class="mb-0">まずは自分のことを知るために、好きなものをピックアップしてみよう！</h3>
+                    <br>
+                    <p class="card-text mb-auto">好きなものの理由を５つ考えます。<br>新しい発見があるかも！</p>
+                    <a href="#" class="stretched-link text-danger">マイページ</a>
                   </div>
                 </div>
-
-                <div class="col-3">
-                  <div class="question">
-                    <h6>(*ﾟ∀ﾟ*)</h6>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-
-                <div class="col-3">
-                <%= image_tag 'サーフィンアイコン1.png' , size: '80x80' %>
-                  <div class="interview-font">趣味ある？<br>何が好き？</div>
-                </div>
-
-                <div class="col-3">
-                <%= image_tag '会話アイコン.png' , size: '80x80' %>
-                  <div class="interview-font">何してる時が<br>楽しい？</div>
-                </div>
-
-                <div class="col-3">
-                <%= image_tag 'マッチョアイコン2.png' , size: '80x80' %>
-                  <div class="interview-font">次の休日は<br>何するの？</div>
-                </div>
-
-                <div class="col-3">
-                <%= image_tag 'うれしい.png' , size: '60x60' %>
-                  <div class="interview-font">最近〇〇に<br>ハマってて</div>
-                </div>
-
               </div>
             </div>
+
           </div>
+
+          <div class="col-1">
+          </div>
+
         </div>
-        <!-- /.row -->
+      </div>
 
-        <br>
-        <br>
-
-        <div class="row mb-2">
-          <div class="col-md-12">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col-auto d-lg-block">
-                <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" width="200" height="250">
-              </div>
-
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-danger">投稿する</strong>
-                <h3 class="mb-0">まずは自分のことを知るために、好きなものをピックアップしてみよう！</h3>
-                <br>
-                <p class="card-text mb-auto">好きなものの理由を５つ考えます。<br>新しい発見があるかも！</p>
-                <a href="#" class="stretched-link text-danger">マイページ</a>
-              </div>
-            </div>
-          </div>
+      <div class='favorite-thing-contents'>
+        <h2 class='title'>ピックアップカテゴリー</h2>
+        <div class="subtitle" >
+          みんなの好きなもの
         </div>
-
-        <div class='favorite-thing-contents'>
-          <h2 class='title'>ピックアップカテゴリー</h2>
-          <div class="subtitle" >
-            みんなの好きなもの
-          </div>
-          <div class='favorite-thing-lists'>
-            <%# <div class="card__wrapper"> %>
-              <%= render partial: 'favorite_thing', collection: @favorite_things %>
-            <%# </div> %>
-          </div>
+        <div class='favorite-thing-lists'>
+          <%# <div class="card__wrapper"> %>
+            <%= render partial: 'favorite_thing', collection: @favorite_things %>
+          <%# </div> %>
         </div>
+      </div>
         <%# <!-- START THE FEATURETTES -->
 
           <hr class="featurette-divider">
@@ -324,7 +340,6 @@
           <hr class="featurette-divider">
 
         <!-- /END THE FEATURETTES --> %>
-      </div>
 
       <!-- /.row -->
       <%# <!-- START THE FEATURETTES -->

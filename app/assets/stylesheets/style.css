@@ -170,9 +170,12 @@ a {
 .card-border-none {
   width: calc((100% - 50px) / 6);
   margin-bottom: 40px;
+  padding: 0 5px;
 }
 .card__img {
   margin-bottom: 16px;
+  width: 33vh;
+  height: 33vh;
 }
 .card__title {
   display: block;
