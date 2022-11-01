@@ -71,7 +71,7 @@
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
 
-        <div class="carousel-inner bg-warning">
+        <div class="carousel-inner bg-white">
           <div class="carousel-item active">
             <div class="row">
               <div class="col-xl-1">
@@ -107,7 +107,11 @@
               <div class="carousel-caption">
                 <h1>自己分析してみよう!</h1>
                 <p>Let's do a self-analysis.There may be new discoveries.</p>
-                <p><a class="btn btn-lg btn-danger" href="/users/<%= current_user.id %>">マイページへ</a></p>
+                <% if user_signed_in? %>
+                  <p><a class="btn btn-lg btn-danger" href="/users/<%= current_user.id %>">マイページへ</a></p>
+                <% else %>
+                  <p><a class="btn btn-lg btn-danger" href="/users/sign_in">マイページへ</a></p>
+                <% end %>
               </div>
             </div>
           </div>
@@ -151,7 +155,7 @@
         <!-- Three columns of text below the carousel -->
 
         <div class="px-4 py-5 mt-5 text-roght">
-          <p class="h1 fw-bold text-center">あなたは自分のことをどれだけ知っていますか？</p>
+          <p class="h1 fw-bold text-center">あなたは自分のことをどのくらい知っていますか？</p>
           <br>
           <div class="col-lg-10 mx-auto">
             <p class="lead mb-4">やりたいことがいつまでも見つからない。自分にはなんの取り柄もないような気がする。そんな考えがぐるぐるとうずまき、不安を感じてばかりいないでしょうか。</p>
@@ -163,7 +167,7 @@
 
 
       <div class="carousel-inner bg-light ">
-        <div class="row">
+        <div class="row mt-4">
         
           <div class="col-1">
           </div>
@@ -190,17 +194,17 @@
 
                     <div class="col-3">
                       <%= image_tag '社長のアイコン.png' , size: '80x80' %>
-                      <div class="interview-font">自己紹介を<br>してください</div>
+                      <div class="interview-font">自己紹介をしてください</div>
                     </div>
 
                     <div class="col-3">
                       <%= image_tag 'サラリーマン.png' , size: '80x80' %>
-                      <div class="interview-font">強みは<br>なんですか？</div>
+                      <div class="interview-font">強みはなんですか？</div>
                     </div>
 
                     <div class="col-3">
                       <%= image_tag 'お団子あたまのキャリアウーマン.png' , size: '80x80' %>
-                      <div class="interview-font">将来の<br>ビジョンは？</div>
+                      <div class="interview-font">将来のビジョンは？</div>
                     </div>
 
                     <div class="col-3">
@@ -237,17 +241,17 @@
 
                     <div class="col-3">
                     <%= image_tag '会話アイコン.png' , size: '80x80' %>
-                      <div class="interview-font">何してる時が<br>楽しい？</div>
+                      <div class="interview-font">何してる時が楽しい？</div>
                     </div>
 
                     <div class="col-3">
                     <%= image_tag 'マッチョアイコン2.png' , size: '80x80' %>
-                      <div class="interview-font">次の休日は<br>何するの？</div>
+                      <div class="interview-font">次の休日は何するの？</div>
                     </div>
 
                     <div class="col-3">
                     <%= image_tag 'うれしい.png' , size: '60x60' %>
-                      <div class="interview-font">最近〇〇に<br>ハマってて</div>
+                      <div class="interview-font">最近は〇〇にハマってて</div>
                     </div>
 
                   </div>
