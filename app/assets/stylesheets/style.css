@@ -101,13 +101,12 @@ a {
 
 /* フォーム周り */
 .form__wrapper {
-  min-height: calc(100vh - 161px);
+  min-height: calc(100vh - 220px);
   text-align: center;
   padding-bottom: 5px;
   margin: 50px auto;
-  width: 500px;
+  width: auto;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: rgb(251, 243, 243);
   box-sizing: border-box;
 }
 
@@ -168,11 +167,14 @@ a {
   margin: 0 60px
 }
 .card-border-none {
-  width: calc((100% - 50px) / 6);
+  width: calc((100% - 50px) / 5);
   margin-bottom: 40px;
+  padding: 0 5px;
 }
 .card__img {
   margin-bottom: 16px;
+  width: 33vh;
+  height: 33vh;
 }
 .card__title {
   display: block;
@@ -300,7 +302,7 @@ textarea:focus {
 }
 
 .favorite-thing-lists {
-  width: 100vw;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -329,6 +331,10 @@ textarea:focus {
 }
 
 /* 詳細ページ */
+.nav-tabs .nav-link{
+  color: #f06789;
+}
+
 .favorite-thing__wrapper {
   min-height: calc(100vh - 161px);
 }
@@ -491,7 +497,7 @@ div.contents.row .success .btn :hover {
 .user__manage {
   display: block;
   justify-content: left;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 /* フッター */

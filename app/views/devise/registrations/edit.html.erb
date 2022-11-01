@@ -1,56 +1,97 @@
-<h2>ユーザー情報編集</h2>
+<div class="main bg-light">
+  <div class="inner">
+    <div class="form__wrapper">
+      <div class="h-100 p-5 text-black bg-white ">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+        <i class="bi bi-door-open-fill" alt="" width="72" height="57"></i>
+        <i class="bi bi-box-arrow-in-right" alt="" width="72" height="57"></i>
 
-    <div class="field">
-      <%= f.label :nickname, "ニックネーム" %>
-      <span class="indispensable">必須</span><br/>
-      <%= f.text_field :nickname, id:"user_name", autofocus: true %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a href="#profile" class="nav-link active" data-bs-toggle="tab">ユーザー情報 編集</a>
+        </li>
+        <li class="nav-item">
+          <a href="#items" class="nav-link" data-bs-toggle="tab">アカウント削除</a>
+        </li>
+      </ul>
+
+      <%# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ %>
+
+      <div class="tab-content mt-4">
+        <div id="profile" class="tab-pane active">
+
+          <h1 class="h3 mb-3 fw-normal border-bottom">ユーザー情報 編集</h1>
+
+          <div class="field">
+            <%= f.label :nickname, "■ニックネーム" %>
+            <span class="indispensable">必須</span><br/>
+            <%= f.text_field :nickname, id:"user_name", autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label :email, "■メールアドレス" %>
+            <span class="indispensable">必須</span><br/>
+            <%= f.email_field :email, id:"user_email", autocomplete: "email" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :profile, "■プロフィール" %>
+            <span class="indispensable">必須</span><br/>
+            <%= f.text_area :profile, class: :form__text, id:"user_profile" %>
+          </div>
+
+          <p>============================================</p>
+
+          <div class="field">
+            <%= f.label :password, "■新しいパスワード" %> <br>
+              <i>(※変更したくない場合は空白のままにしてください)</i> <br />
+            <%= f.password_field :password, autocomplete: "new-password" %>
+            <% if @minimum_password_length %>
+              <br />
+              <em><%= @minimum_password_length %> 文字以上半角英数字 </em>
+            <% end %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password_confirmation, "■新しいパスワード再入力" %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </div>
+
+          <p>============================================</p>
+
+          <div class="field">
+            <%= f.label :current_password, "■現在のパスワード" %><br>
+              <i>(ユーザー情報を変更するには、現在のパスワードが必要です)</i><br />
+            <%= f.password_field :current_password, autocomplete: "current-password" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "更新する" %><br>
+            <br>
+            <%= button_to "もどる", user_path(current_user), method: :get %>
+          </div>
+        </div>
+
+        <%# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ %>
+
+        <div id="items" class="tab-pane">
+          <h1 class="h3 mb-3 fw-normal border-bottom">アカウント削除</h1>
+
+          <p>■アカウントを削除しますか？ <%= button_to "削除する", registration_path(resource_name), data: { confirm: "本当に削除しますか?" }, method: :delete %></p>
+          <br>
+          <%= button_to "もどる", user_path(current_user), method: :get %>
+        </div>
+
+      </div>
+
+
+
+        <% end %>
+      </div>
     </div>
-
-    <div class="field">
-      <%= f.label :email, "メールアドレス" %>
-      <span class="indispensable">必須</span><br/>
-      <%= f.email_field :email, id:"user_email", autocomplete: "email" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password, "新しいパスワード" %> <i>(※変更したくない場合は空白のままにしてください)</i> <br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
-      <% if @minimum_password_length %>
-        <br />
-        <em><%= @minimum_password_length %> 文字以上半角英数字 </em>
-      <% end %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation, "新しいパスワード再入力" %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :profile, "プロフィール" %>
-      <span class="indispensable">必須</span><br/>
-      <%= f.text_area :profile, class: :form__text, id:"user_profile" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :current_password %> <i>(ユーザー情報を変更するには、現在のパスワードが必要です)</i><br />
-      <%= f.password_field :current_password, autocomplete: "current-password" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "更新する" %><br>
-      <br>
-      <%= button_to "もどる", user_path(current_user), method: :get %>
-    </div>
-<% end %>
-
-<div> ===================================================== </div>
-<h3> アカウント削除 </h3>
-
-<p>アカウントを削除しますか？ <%= button_to "削除する", registration_path(resource_name), data: { confirm: "本当に削除しますか?" }, method: :delete %></p>
-<br>
-<%= button_to "もどる", user_path(current_user), method: :get %>
+  </div>
+</div>
 
