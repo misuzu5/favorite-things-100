@@ -1,49 +1,82 @@
 <div class="main">
   <div class="inner">
     <div class="user__wrapper">
-      <div class="user__page">
-        <h2 class="page-heading">
-          <%= "#{@user.nickname}さんの情報"%>
-        </h2>
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a href="#profile" class="nav-link active" data-bs-toggle="tab">プロフィール</a>
+        </li>
+        <li class="nav-item">
+          <a href="#list100" class="nav-link" data-bs-toggle="tab">リスト100</a>
+        </li>
+        <li class="nav-item">
+          <a href="#items" class="nav-link" data-bs-toggle="tab">好きなもの一覧</a>
+        </li>
+      </ul>
 
-        <% if current_user == @user%>
-          <div class="user__manage">
-            <%= link_to "編集・削除", edit_user_registration_path(@user), class: :favorite_thing__btn %>
+      <%# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ %>
+
+      <div class="tab-content">
+
+        <div id="profile" class="tab-pane active">
+          <div class="user__page">
+            <h2 class="page-heading">
+              <%= "#{@user.nickname}さんの情報"%>
+            </h2>
+
+            <% if current_user == @user%>
+              <div class="user__manage">
+                <%= link_to "編集・削除", edit_user_registration_path(@user), class: :favorite_thing__btn %>
+              </div>
+            <% end %>
           </div>
-        <% end %>
-      </div>
 
-      <table class="table">
-        <tbody>
-          <tr>
-            <th class="table__col1">名前</th>
-            <td class="table__col2"><%= @user.nickname %></td>
-          </tr>
-          <tr>
-            <th class="table__col1">プロフィール</th>
-            <td class="table__col2"><%= @user.profile %></td>
-          </tr>
-        </tbody>
-      </table>
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの好きなもの一覧"%>
-      </h2>
-
-      <div class="user__list">
-        <% @titles.each_with_index do |title, i| %>
-          <table class="list">
+          <table class="table">
             <tbody>
               <tr>
-                <td class="list__col1"><%= i+1 %></td>
-                <td class="list__col2"><%= title %></td>
+                <th class="table__col1">名前</th>
+                <td class="table__col2"><%= @user.nickname %></td>
+              </tr>
+              <tr>
+                <th class="table__col1">プロフィール</th>
+                <td class="table__col2"><%= @user.profile %></td>
               </tr>
             </tbody>
           </table>
-        <% end %>
-      </div>
+        </div>
 
-      <div class='favorite-thing-lists'>
-        <%= render partial: 'favorite_things/favorite_thing', collection: @user.favorite_things %>
+      <%# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ %>
+
+        <div id="list100" class="tab-pane">
+          <h2 class="page-heading">
+            <%= "#{@user.nickname}さんの好きなものリスト100"%>
+          </h2>
+
+          <div class="user__list">
+            <% @titles.each_with_index do |title, i| %>
+              <table class="list">
+                <tbody>
+                  <tr>
+                    <td class="list__col1"><%= i+1 %></td>
+                    <td class="list__col2"><%= title %></td>
+                  </tr>
+                </tbody>
+              </table>
+            <% end %>
+          </div>
+        </div>
+
+      <%# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ %>
+
+        <div id="items" class="tab-pane">
+          <h2 class="page-heading">
+            <%= "#{@user.nickname}さんの好きなもの一覧"%>
+          </h2>
+
+          <div class='favorite-thing-lists'>
+            <%= render partial: 'favorite_things/favorite_thing', collection: @user.favorite_things %>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
