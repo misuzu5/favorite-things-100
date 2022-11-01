@@ -101,13 +101,12 @@ a {
 
 /* フォーム周り */
 .form__wrapper {
-  min-height: calc(100vh - 161px);
+  min-height: calc(100vh - 220px);
   text-align: center;
   padding-bottom: 5px;
   margin: 50px auto;
-  width: 500px;
+  width: auto;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: rgb(251, 243, 243);
   box-sizing: border-box;
 }
 
@@ -168,7 +167,7 @@ a {
   margin: 0 60px
 }
 .card-border-none {
-  width: calc((100% - 50px) / 6);
+  width: calc((100% - 50px) / 5);
   margin-bottom: 40px;
   padding: 0 5px;
 }
