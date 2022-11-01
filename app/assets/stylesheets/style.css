@@ -303,7 +303,7 @@ textarea:focus {
 }
 
 .favorite-thing-lists {
-  width: 100vw;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -498,7 +498,7 @@ div.contents.row .success .btn :hover {
 .user__manage {
   display: block;
   justify-content: left;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 /* フッター */
