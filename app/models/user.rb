@@ -21,4 +21,6 @@ class User < ApplicationRecord
       user.profile = 'ゲストユーザーです'
     end
   end
+
+  mount_uploader :image, ImageUploader
 end

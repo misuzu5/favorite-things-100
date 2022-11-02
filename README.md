@@ -9,6 +9,8 @@
 | email                  | string  | null: false, unique: true |
 | encrypted_password     | string  | null: false               |
 | profile                | text    | null: false               |
+| image               | string  |                           |
+
 
 ### Association
 - has_many :favorite_things
