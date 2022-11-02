@@ -244,6 +244,13 @@ textarea:focus {
   color: #f43464;
 }
 
+.icon_image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
 /* 投稿ページ */
 .dispensable {
   font-size: 10px;
@@ -256,6 +263,21 @@ textarea:focus {
 
 .error-message {
   color: red;
+}
+
+.new-img{
+  width: 200px;
+  object-fit: cover;
+}
+
+.sign-up-img{
+  width: 200px;
+  object-fit: cover;
+}
+
+.edit-img{
+  width: 200px;
+  object-fit: cover;
 }
 
 .back-btn {

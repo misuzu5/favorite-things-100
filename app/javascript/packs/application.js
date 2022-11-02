@@ -6,6 +6,9 @@
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
+require('./preview')
+require('./preview-sign-up')
+require('./preview-edit')
 import "bootstrap"
 import "../stylesheets/application"
 

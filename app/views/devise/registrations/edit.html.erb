@@ -43,6 +43,14 @@
             <%= f.text_area :profile, class: :form__text, id:"user_profile" %>
           </div>
 
+          <div class="field">
+            <%= f.label :image, "プロフィール画像" %>
+          <span class="dispensable">任意</span><br/>
+            <%= f.file_field :image %>
+          </div>
+
+          <div id="edit-image"></div>
+
           <p>============================================</p>
 
           <div class="field">
