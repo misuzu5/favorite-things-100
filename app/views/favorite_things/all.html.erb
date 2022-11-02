@@ -8,4 +8,7 @@
         <%= render partial: 'favorite_thing', collection: @favorite_things %>
     </div>
   </div>
+
+  <%= paginate @favorite_things %>
+
 </main>

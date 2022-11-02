@@ -41,7 +41,7 @@ class FavoriteThingsController < ApplicationController
   end
 
   def all
-    @favorite_things = FavoriteThing.includes(:user).order('created_at DESC')
+    @favorite_things = FavoriteThing.includes(:user).order('created_at DESC').page(params[:page]).per(5)
   end
 
   private
