@@ -40,6 +40,14 @@
             <%= f.text_area :profile, class: :form__text, id:"user_profile", placeholder: "Profile" %>
           </div>
 
+            <div class="field">
+              <%= f.label :image, "プロフィール画像" %>
+             <span class="dispensable">任意</span><br/>
+              <%= f.file_field :image %>
+            </div>
+
+            <div id="sign-up-image"></div>
+
           <div class="actions">
             <%= f.submit "新規登録", class: :form__btn  %>
           </div>
