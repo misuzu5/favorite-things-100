@@ -1,6 +1,6 @@
 class FavoriteThingsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :all]
-  before_action :set_favorite_thing, except: [:index, :new, :create, :all]
+  before_action :authenticate_user!, except: [:index, :show, :all, :search]
+  before_action :set_favorite_thing, except: [:index, :new, :create, :all, :search]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   def index
@@ -42,6 +42,10 @@ class FavoriteThingsController < ApplicationController
 
   def all
     @favorite_things = FavoriteThing.includes(:user).order('created_at DESC').page(params[:page]).per(5)
+  end
+
+  def search
+    @favorite_things = FavoriteThing.search(params[:keyword]).order('created_at DESC').page(params[:page]).per(5)
   end
 
   private

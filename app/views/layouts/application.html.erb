@@ -27,36 +27,52 @@
 
   <body>
     <div class="container">
-      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <div class="col-md-3">
-          <%= link_to image_tag("logo.png", class: :logo), root_path %>
-        </div>
-        
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
-        </ul>
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
 
-        <div class="col-md-3 text-end">
-          <% if user_signed_in? %>
-            <div class="nav__right">
-              <%= link_to "#{current_user.nickname}さん", user_path(current_user), class: :nav__name %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn %>
-              <%# <%= link_to "New Favorite", new_favorite_thing_path, class: :nav__btn %>
-            </div>
-          <% else %>          
-            <div class="nav__right">
-              <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class: :nav__btn %>
-              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
-            </div>
-          <% end %>
-
+        <div class="container d-flex flex-wrap align-items-center justify-content-md-between">
+          <div class="col-md-3">
+            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+          </div>
+          <div class="col-md-4 text-end">
+            <%= form_with(url: search_favorite_things_path, local: true, method: :get, class: "search-form") do |form| %>
+              <%= form.text_field :keyword, placeholder: "Search...", class: "search-input" %>
+              <%= form.submit "検索", class: "nav__btn" %>
+            <% end %>
+          </div>
         </div>
       </header>
+
+      <nav class="py-2 border-bottom">
+        <div class="container d-flex flex-wrap align-items-center ">
+
+          <ul class="nav me-auto col-md-5">
+            <li class="nav-item"><a href="/" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+            <% if user_signed_in? %>
+              <li><a href="/users/<%= current_user.id %>" class="nav-link px-2 link-dark">My page</a></li>
+            <% else %>
+              <li><a href="/users/sign_in" class="nav-link px-2 link-dark">My page</a></li>
+            <% end %>
+            <li><a href="/favorite_things/all" class="nav-link px-2 link-dark">Other people like </a></li>
+          </ul>
+
+          <div class="col-md-6 text-end">
+            <% if user_signed_in? %>
+              <div class="nav__right">
+                <%= link_to "#{current_user.nickname}さん", user_path(current_user), class: :nav__name %>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn %>
+                <%= link_to "New Favorite", new_favorite_thing_path, class: :nav__btn %>
+              </div>
+            <% else %>          
+              <div class="nav__right">
+                <%= link_to 'ゲストログイン(閲覧用)', users_guest_sign_in_path, method: :post, class: :nav__btn %>
+                <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+                <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+              </div>
+            <% end %>
+
+          </div>
+        </div>
+      </nav>
     </div>
 
     <%= yield %>
