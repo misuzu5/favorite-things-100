@@ -597,7 +597,7 @@ div.contents.row .success .btn :hover {
 /* スマホ表示 */
 @media (max-width: 599px) {
   .logo {
-    width: 120px;
+    /* width: 120px; */
   }
   .page-heading {
     font-size: 20px;

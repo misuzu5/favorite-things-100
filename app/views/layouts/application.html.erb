@@ -29,31 +29,10 @@
     <div class="container">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
 
-        <div class="container d-flex flex-wrap align-items-center justify-content-md-between">
-          <div class="col-md-3">
+        <%# <div class="container d-flex flex-wrap align-items-center justify-content-md-between"> %>
+          <div class="col-md-6">
             <%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
-          <div class="col-md-4 text-end">
-            <%= form_with(url: search_favorite_things_path, local: true, method: :get, class: "search-form") do |form| %>
-              <%= form.text_field :keyword, placeholder: "Search...", class: "search-input" %>
-              <%= form.submit "検索", class: "nav__btn" %>
-            <% end %>
-          </div>
-        </div>
-      </header>
-
-      <nav class="py-2 border-bottom">
-        <div class="container d-flex flex-wrap align-items-center ">
-
-          <ul class="nav me-auto col-md-5">
-            <li class="nav-item"><a href="/" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
-            <% if user_signed_in? %>
-              <li><a href="/users/<%= current_user.id %>" class="nav-link px-2 link-dark">My page</a></li>
-            <% else %>
-              <li><a href="/users/sign_in" class="nav-link px-2 link-dark">My page</a></li>
-            <% end %>
-            <li><a href="/favorite_things/all" class="nav-link px-2 link-dark">Other people like </a></li>
-          </ul>
 
           <div class="col-md-6 text-end">
             <% if user_signed_in? %>
@@ -69,7 +48,32 @@
                 <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
               </div>
             <% end %>
+          </div>
 
+
+
+        <%# </div> %>
+      </header>
+
+      <nav class="py-2 border-bottom">
+        <div class="d-flex flex-wrap align-items-center ">
+
+          <ul class="nav me-auto col-md-6 justify-content-md-start">
+            <li class="nav-item"><a href="/" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+            <% if user_signed_in? %>
+              <li><a href="/users/<%= current_user.id %>" class="nav-link px-2 link-dark">My page</a></li>
+            <% else %>
+              <li><a href="/users/sign_in" class="nav-link px-2 link-dark">My page</a></li>
+            <% end %>
+            <li><a href="/favorite_things/all" class="nav-link px-2 link-dark">Other people like </a></li>
+          </ul>
+
+
+          <div class="col-md-6 text-end">
+            <%= form_with(url: search_favorite_things_path, local: true, method: :get, class: "search-form") do |form| %>
+              <%= form.text_field :keyword, placeholder: "Search...", class: "search-input" %>
+              <%= form.submit "検索", class: "nav__btn" %>
+            <% end %>
           </div>
         </div>
       </nav>
