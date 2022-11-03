@@ -9,4 +9,12 @@ class FavoriteThing < ApplicationRecord
     validates :episode
     validates :image
   end
+
+  def self.search(search)
+    if search != ""
+      FavoriteThing.where('title LIKE(?)', "%#{search}%")
+    else
+      FavoriteThing.all
+    end
+  end
 end
