@@ -1,6 +1,6 @@
-<!doctype html>
-<html lang="ja">
-  <head>
+<%# <!doctype html> %>
+<%# <html lang="ja"> %>
+  <%# <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -32,7 +32,7 @@
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
 
-  </head>
+  </head> %>
   
   <body>
     <%# <header>
@@ -131,7 +131,7 @@
               <div class="carousel-caption text-end">
                 <h1>他の人の好きなものも見てみよう!</h1>
                 <p>What do other people like? See what other people like.</p>
-                <p><a class="btn btn-lg btn-danger" href="#">一覧ページへ</a></p>
+                <p><a class="btn btn-lg btn-danger" href="/favorite_things/all">一覧ページへ</a></p>
               </div>
             </div>
           </div>
@@ -295,9 +295,7 @@
           みんなの好きなもの
         </div>
         <div class='favorite-thing-lists'>
-          <%# <div class="card__wrapper"> %>
             <%= render partial: 'favorite_thing', collection: @favorite_things %>
-          <%# </div> %>
         </div>
       </div>
         <%# <!-- START THE FEATURETTES -->
@@ -401,4 +399,4 @@
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-</html>
+<%# </html> %>

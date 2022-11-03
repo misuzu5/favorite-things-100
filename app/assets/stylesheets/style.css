@@ -245,9 +245,9 @@ textarea:focus {
 }
 
 .icon_image {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
 }
 
@@ -300,7 +300,7 @@ textarea:focus {
   cursor: pointer;
 }
 
-/* 一覧ページ */
+/* トップページ */
 .favorite-thing-contents {
   background-color: #fff;
   display: flex;
@@ -464,6 +464,26 @@ div.contents.row .success .btn {
 div.contents.row .success .btn :hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
+}
+
+/* 全投稿一覧ページ */
+
+.pagination {
+  justify-content: center;
+}
+
+.pagination>li>a {
+  border: none;
+  color: #696969;
+}
+
+.pagination>.active>a {     
+  /* background: #93c9ff; */
+  border-radius: 15px;
+}
+
+.pagination>li>a:hover {        
+  border-radius: 15px;
 }
 
 /* ユーザーページ */
