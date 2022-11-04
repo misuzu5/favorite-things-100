@@ -13,6 +13,7 @@ ja:
         profile: プロフィール
       favorite_thing:
         title: 好きなもののタイトル
+        type_id: 好きなもののタイプ
         reason: 好きな理由
         episode: エピソード
         image: イメージ画像

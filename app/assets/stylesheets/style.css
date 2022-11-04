@@ -280,6 +280,11 @@ textarea:focus {
   object-fit: cover;
 }
 
+.type-select{
+  height: 30px;
+  width: 250px;
+}
+
 .back-btn {
   display: inline-block;
   padding: 0.4em 1.6em;

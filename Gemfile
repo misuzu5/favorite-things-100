@@ -67,3 +67,4 @@ gem "aws-sdk-s3", require: false
 gem 'carrierwave'
 gem 'kaminari'
 gem 'jquery-rails'
+gem 'active_hash'
