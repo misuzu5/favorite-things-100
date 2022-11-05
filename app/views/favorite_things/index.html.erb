@@ -155,7 +155,7 @@
         <!-- Three columns of text below the carousel -->
 
         <div class="px-4 py-5 mt-5 text-roght">
-          <p class="h1 fw-bold text-center">あなたの「好きなこと」は何ですか？</p>
+          <p class="h1 fw-bold text-center">あなたの「好きなこと」は何ですか？<i class="bi bi-chat-heart"></i></p>
           <br>
           <div class="col-lg-10 mx-auto">
             <p class="lead mb-4">やりたいことがいつまでも見つからない。自分にはなんの取り柄もないような気がする。そんな考えがぐるぐるとうずまき、不安を感じてばかりいないでしょうか。</p>
@@ -165,47 +165,48 @@
         </div>
       </div>
 
+      <div class="container">
+        <div class="carousel-inner bg-light ">
+          <div class="row p-4">
+            <div class="col-xl-6">
+              <div class="row">
+                <div class="col-md-auto">
+                  <div class="row g-0 border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
+                    <div class="col-auto d-lg-block">
+                      <img src="https://cdn.pixabay.com/photo/2017/06/25/09/03/coffee-2440074_1280.jpg" class="d-block w-100" width="200" height="250">
+                    </div>
 
-      <div class="carousel-inner bg-light ">
-        <div class="row p-4">
-          <div class="col-xl-6">
-            <div class="row">
-              <div class="col-md-auto">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
-                  <div class="col-auto d-lg-block">
-                    <img src="https://cdn.pixabay.com/photo/2017/06/25/09/03/coffee-2440074_1280.jpg" class="d-block w-100" width="200" height="250">
-                  </div>
-
-                  <div class="col p-4 d-flex flex-column position-static">
-                    <h4 class="mb-0">まずは自分のことを知るために、好きなことをピックアップしてみよう！</h4>
-                    <br>
-                    <p class="card-text mb-auto">好きなことを動詞であげてみましょう。<br>新しい発見があるかも！</p>
-                    <br>
-                    <p><a class="btn btn-lg btn-danger" href="/favorite_things/new">投稿する</a></p>
+                    <div class="col p-4 d-flex flex-column position-static">
+                      <h4 class="mb-0">まずは自分のことを知るために、好きなことをピックアップしてみよう！</h4>
+                      <br>
+                      <p class="card-text mb-auto">好きなことを動詞であげてみましょう。<br>新しい発見があるかも！</p>
+                      <br>
+                      <p><a class="btn btn-lg btn-danger" href="/favorite_things/new">投稿する</a></p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-xl-6">
-            <div class="row">
-              <div class="col-md-auto">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
-                  <div class="col-auto d-lg-block">
-                    <img src="https://cdn.pixabay.com/photo/2020/02/28/16/18/board-4887880_1280.jpg" class="d-block w-100" width="200" height="250">
-                  </div>
+            <div class="col-xl-6">
+              <div class="row">
+                <div class="col-md-auto">
+                  <div class="row g-0 border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
+                    <div class="col-auto d-lg-block">
+                      <img src="https://cdn.pixabay.com/photo/2020/02/28/16/18/board-4887880_1280.jpg" class="d-block w-100" width="200" height="250">
+                    </div>
 
-                  <div class="col p-4 d-flex flex-column position-static">
-                    <h4 class="mb-0">好きなことを３つのタイプに分類して、自己分析してみよう！</h4>
-                    <br>
-                    <p class="card-text mb-auto">思考タイプ、コミュニケーションタイプ、リーダータイプ<br>あなたはどのタイプ？</p>
-                    <br>
-                    <% if user_signed_in? %>
-                      <p><a class="btn btn-lg btn-danger" href="/users/<%= current_user.id %>">マイページへ</a></p>
-                    <% else %>
-                      <p><a class="btn btn-lg btn-danger" href="/users/sign_in">マイページへ</a></p>
-                    <% end %>
+                    <div class="col p-4 d-flex flex-column position-static">
+                      <h4 class="mb-0">好きなことを３つのタイプに分類して、自己分析してみよう！</h4>
+                      <br>
+                      <p class="card-text mb-auto">思考タイプ、コミュニケーションタイプ、リーダータイプ<br>あなたはどのタイプ？</p>
+                      <br>
+                      <% if user_signed_in? %>
+                        <p><a class="btn btn-lg btn-danger" href="/users/<%= current_user.id %>">マイページへ</a></p>
+                      <% else %>
+                        <p><a class="btn btn-lg btn-danger" href="/users/sign_in">マイページへ</a></p>
+                      <% end %>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -214,15 +215,18 @@
         </div>
       </div>
 
-      <div class='favorite-thing-contents'>
-        <h2 class='title'>ピックアップカテゴリー</h2>
-        <div class="subtitle" >
-          みんなの好きなこと
-        </div>
-        <div class='favorite-thing-lists'>
-            <%= render partial: 'favorite_thing', collection: @favorite_things %>
+      <div class="container">
+        <div class='favorite-thing-contents'>
+          <h2 class='title'><i class="bi bi-search-heart"></i> みんなの好きなこと</h2>
+          <div class="subtitle" >
+            <p><a class="btn btn-lg btn-danger" href="/favorite_things/all">一覧ページへ</a></p>
+          </div>
+          <div class='favorite-thing-lists'>
+              <%= render partial: 'favorite_thing', collection: @favorite_things %>
+          </div>
         </div>
       </div>
+
         <%# <!-- START THE FEATURETTES -->
 
           <hr class="featurette-divider">

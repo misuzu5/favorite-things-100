@@ -175,6 +175,7 @@ a {
   margin-bottom: 16px;
   width: 33vh;
   height: 33vh;
+  object-fit: contain;
 }
 .card__title {
   display: block;
@@ -329,7 +330,7 @@ textarea:focus {
 }
 
 .favorite-thing-lists {
-  width: auto;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -601,9 +602,6 @@ div.contents.row .success .btn :hover {
 
 /* スマホ表示 */
 @media (max-width: 599px) {
-  .logo {
-    /* width: 120px; */
-  }
   .page-heading {
     font-size: 20px;
   }
@@ -618,7 +616,7 @@ div.contents.row .success .btn :hover {
     font-size: 14px;
   }
   .card-border-none {
-    width: calc((100% - 50px) / 3);
+    width: calc((100% - 50px) / 2);
     margin-bottom: 40px;
   }
   .favorite-thing_image {
