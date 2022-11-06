@@ -13,7 +13,7 @@ class FavoriteThing < ApplicationRecord
     validates :image
   end
 
-  validates :type_id, numericality: { other_than: 1 , message: " を選択して下さい"}
+  validates :type_id, numericality: { other_than: 0 , message: " を選択して下さい"}
 
   def self.search(search)
     if search != ""

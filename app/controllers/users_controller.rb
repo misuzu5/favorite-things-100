@@ -2,7 +2,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @favorite_things = @user.favorite_things
-    # @type_ids = @favorite_things.group(:type_id).count
     @titles = @favorite_things.pluck(:title)
+
+    ary = @favorite_things.pluck(:type_id)
+    @type_num = ary.max_by { |v| ary.count(v) }
   end
 end

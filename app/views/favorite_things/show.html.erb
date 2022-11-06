@@ -18,12 +18,18 @@
                 <% if current_user == @favorite_thing.user%>
                   <div class="favorite-thing__manage">
                     <%= link_to "編集する", edit_favorite_thing_path(@favorite_thing), class: :favorite_thing__btn %>
-                    <%= link_to "削除する", favorite_thing_path(@favorite_thing), method: :delete, class: :favorite_thing__btn %>
+                    <%= link_to "削除する", favorite_thing_path(@favorite_thing), data: { confirm: "本当に削除しますか?" }, method: :delete, class: :favorite_thing__btn %>
                   </div>
                 <% end %>
               </div>
 
                 <div class="favorite-thing__body">
+                  <div class="favorite-thing__detail">
+                    <p class="detail__title">タイプ</p>
+                    <p class="detail__message">
+                      <%= @favorite_thing.type.name %>
+                    </p>
+                  </div>
                   <div class="favorite-thing__detail">
                     <p class="detail__title">好きな理由</p>
                     <p class="detail__message">

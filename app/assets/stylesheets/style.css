@@ -570,6 +570,14 @@ div.contents.row .success .btn :hover {
   /* margin-top: 20px; */
 }
 
+.lists__title {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f06789;
+  text-decoration: none;
+}
+
 /* フッター */
 
 .footer {

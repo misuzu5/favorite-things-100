@@ -67,13 +67,32 @@
             </div>
           </div>
 
-                    <%= pie_chart @favorite_things.group(:type_id).count,colors: ["#F8C6BD","#BEDFC2","#FFFBC7"] %>
-
-                    <%# <% @favorite_things.each do |favorite_thing| %>
-                      <%# <%= favorite_thing.type.name  %>
-                    <%# <% end %>
-
-                    <%# <%= @type_ids %>
+          <div class="row mb-2">
+            <div class="col-md-12">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-md-6 d-lg-block p-5">
+                  <%= pie_chart @favorite_things.group(:type_id).count,colors: ["#F8C6BD","#BEDFC2","#FFFBC7"] %>
+                </div>
+              
+                <div class="col-md-6 d-lg-block p-5 ">
+                  <% if @type_num == 1 %>
+                    <h4>【1】「 T（Thinking・思考タイプ）」</h4>
+                    <h5>「問題を解く、計算をするなど」が多いあなたは、</h5>
+                    <div>研究職やコンサルタントに向いています！</div>
+                  <% elsif @type_num == 2 %>
+                    <h4>【2】「 C（Communication・コミュニケーションタイプ）」</h4>
+                    <h5>「人と会う、人と話すなど」が多いあなたは、</h5>
+                    <div>営業職や接客業に向いています！</div>
+                  <% elsif @type_num == 3 %>
+                    <h4>【3】「 L（Leadership・リーダータイプ）」</h4>
+                    <h5>「自分で物事を決める、人の世話をするなど」が多いあなたは、</h5>
+                    <div>経営者や管理職に向いています！</div>
+                  <% else %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
 
@@ -90,7 +109,8 @@
                 <tbody>
                   <tr>
                     <td class="list__col1"><%= i+1 %></td>
-                    <td class="list__col2"><%= title %></td>
+                    <td class="list__col2"><%= link_to title, favorite_thing_path(@favorite_things), class: :lists__title%>
+</td>
                   </tr>
                 </tbody>
               </table>
