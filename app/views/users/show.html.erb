@@ -69,11 +69,11 @@
 
                     <%= pie_chart @favorite_things.group(:type_id).count,colors: ["#F8C6BD","#BEDFC2","#FFFBC7"] %>
 
-                    <% @favorite_things.each do |favorite_thing| %>
-                      <%= favorite_thing.type.name  %><br>
-                    <% end %>
+                    <%# <% @favorite_things.each do |favorite_thing| %>
+                      <%# <%= favorite_thing.type.name  %>
+                    <%# <% end %>
 
-                    <%= @type_ids %><br>
+                    <%# <%= @type_ids %>
 
         </div>
 
