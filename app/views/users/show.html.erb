@@ -1,5 +1,5 @@
 <div class="main">
-  <div class="inner">
+  <div class="container">
     <div class="user__wrapper">
       <ul class="nav nav-tabs nav-justified">
         <li class="nav-item">
@@ -9,7 +9,7 @@
           <a href="#list100" class="nav-link" data-bs-toggle="tab">リスト100</a>
         </li>
         <li class="nav-item">
-          <a href="#items" class="nav-link" data-bs-toggle="tab">好きなもの一覧</a>
+          <a href="#items" class="nav-link" data-bs-toggle="tab">好きなこと一覧</a>
         </li>
       </ul>
 
@@ -66,13 +66,22 @@
               </div>
             </div>
           </div>
+
+                    <%= pie_chart @favorite_things.group(:type_id).count,colors: ["#F8C6BD","#BEDFC2","#FFFBC7"] %>
+
+                    <% @favorite_things.each do |favorite_thing| %>
+                      <%= favorite_thing.type.name  %><br>
+                    <% end %>
+
+                    <%= @type_ids %><br>
+
         </div>
 
         <%# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ %>
 
         <div id="list100" class="tab-pane">
           <h2 class="page-heading">
-            <%= "#{@user.nickname}さんの好きなものリスト100"%>
+            <%= "#{@user.nickname}さんの好きなことリスト100"%>
           </h2>
 
           <div class="user__list">
@@ -93,7 +102,7 @@
 
         <div id="items" class="tab-pane">
           <h2 class="page-heading">
-            <%= "#{@user.nickname}さんの好きなもの一覧"%>
+            <%= "#{@user.nickname}さんの好きなこと一覧"%>
           </h2>
 
           <div class='favorite-thing-lists'>

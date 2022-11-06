@@ -37,6 +37,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_hash (3.1.1)
+      activesupport (>= 5.0.0)
     activejob (6.0.6)
       activesupport (= 6.0.6)
       globalid (>= 0.3.6)
@@ -98,6 +100,7 @@ GEM
       marcel (~> 1.0.0)
       mini_mime (>= 0.1.3)
       ssrf_filter (~> 1.0)
+    chartkick (4.2.1)
     childprocess (4.1.0)
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
@@ -320,11 +323,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_hash
   aws-sdk-s3
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
   carrierwave
+  chartkick
   devise
   factory_bot_rails
   faker
