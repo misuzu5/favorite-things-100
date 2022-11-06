@@ -79,25 +79,26 @@
           <div class="actions">
             <%= f.submit "更新する" %><br>
             <br>
-            <%= button_to "もどる", user_path(current_user), method: :get %>
           </div>
         </div>
+        
+      <% end %>
 
         <%# ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ %>
 
         <div id="items" class="tab-pane">
           <h1 class="h3 mb-3 fw-normal border-bottom">アカウント削除</h1>
 
-          <p>■アカウントを削除しますか？ <%= button_to "削除する", registration_path(resource_name), data: { confirm: "本当に削除しますか?" }, method: :delete %></p>
+          <p>■アカウントを削除しますか？</p>
+          <%= button_to "削除する", registration_path(resource_name), data: { confirm: "本当に削除しますか?" }, method: :delete %>
           <br>
-          <%= button_to "もどる", user_path(current_user), method: :get %>
+          <br>
         </div>
 
-      </div>
+
+        <%= button_to "もどる", user_path(current_user), method: :get %>
 
 
-
-        <% end %>
       </div>
     </div>
   </div>
