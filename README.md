@@ -48,9 +48,31 @@ https://favorite-things-100.herokuapp.com/
 
 # 実装した機能についての画像やGIFおよびその説明
 ## 1.トップページ
+![トップページ](https://gyazo.com/9327c69e26356d4bce68f040b12cc90a.gif)
+
 ## 2.ユーザー登録機能
+![ユーザー登録機能](https://gyazo.com/b53f047ba13595c84c48b603872b2cb1.gif)
+
 ## 3.好きなこと投稿機能
+![好きなこと投稿機能](https://gyazo.com/0af16a1a27fd854088ba5ced5532de9c.gif)
+
 ## ４.好きなこと編集機能
+![好きなこと編集機能](https://gyazo.com/577a5dbe32b4b50b0a2ad4c048b9f6f5.gif)
+
+## 5.好きなこと詳細機能
+## 6.好きなこと一覧機能
+## 7.好きなこと削除機能
+## 8.好きなこと検索機能
+## 9.ログイン機能
+## 10.ゲストログイン機能
+## 11.マイページ詳細機能
+## 12.マイページ編集機能
+## 13.マイページ削除機能
+## 14.コメント投稿機能
+
+## 11.マイページ機能
+
+
 
 
 ※	実装した機能について、それぞれどのような特徴があるのかを列挙する形で記載。画像はGyazoで、GIFはGyazoGIFで撮影すること。
@@ -59,7 +81,7 @@ https://favorite-things-100.herokuapp.com/
 	洗い出した要件の中から、今後実装予定の機能がある場合は、その機能を記載。
 
 # データベース設計
-![ER図](https://gyazo.com/6a8ee05d2b2368d0bd5587786a67fa65.png)
+![ER図](https://gyazo.com/d8bb3396b947f1050da25d52abb4ad73.png)
 
 # 画面遷移図
 ![画面遷移図](https://gyazo.com/f18359acbd525af62bd3416f1310e7d5.png)

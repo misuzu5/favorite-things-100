@@ -13,12 +13,13 @@
           <div class="col-md-6">
             <div class="h-100 p-5 text-black bg-light ">
              <div class="d-flex justify-content-between border-bottom">
-                <h3 strong class="d-inline-block "><%= @favorite_thing.title %></h3>
-
+                  <h3 strong class="d-inline-block "><%= @favorite_thing.title %></h3>
+              </div>
+              <div class="text-end">
                 <% if current_user == @favorite_thing.user%>
                   <div class="favorite-thing__manage">
-                    <%= link_to "編集する", edit_favorite_thing_path(@favorite_thing), class: :favorite_thing__btn %>
-                    <%= link_to "削除する", favorite_thing_path(@favorite_thing), data: { confirm: "本当に削除しますか?" }, method: :delete, class: :favorite_thing__btn %>
+                    <%= link_to "編集", edit_favorite_thing_path(@favorite_thing), class: :favorite_thing__btn %>
+                    <%= link_to "削除", favorite_thing_path(@favorite_thing), data: { confirm: "本当に削除しますか?" }, method: :delete, class: :favorite_thing__btn %>
                   </div>
                 <% end %>
               </div>

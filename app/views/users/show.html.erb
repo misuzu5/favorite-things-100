@@ -27,10 +27,14 @@
                     <div class="col-sm-4">
                     </div>
                     <div class="col-sm-4">
-                      <img src=<%= @user.image %> class = "icon_image">
+                      <% if @user.image? %>
+                        <img src=<%= @user.image %> class = "icon_image">
+                      <% else %>
+                        <img src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
+                      <% end %>
                     </div>
-                    <h2 class="text-center">Heading</h2>
-                    <p class="text-center">This is the first column.</p>
+                    <h2 class="text-center"><%= @user.nickname %></h2>
+                    <p class="text-center">This is the profile image.</p>
                     <div class="col-sm-4">
                     </div>
                   </div>
@@ -88,6 +92,7 @@
                     <h5>「自分で物事を決める、人の世話をするなど」が多いあなたは、</h5>
                     <div>経営者や管理職に向いています！</div>
                   <% else %>
+                    <div>No data</div>
                   <% end %>
                 </div>
               </div>
