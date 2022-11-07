@@ -25,6 +25,12 @@
 
                 <div class="favorite-thing__body">
                   <div class="favorite-thing__detail">
+                    <p class="detail__title">タイプ</p>
+                    <p class="detail__message">
+                      <%= @favorite_thing.type.name %>
+                    </p>
+                  </div>
+                  <div class="favorite-thing__detail">
                     <p class="detail__title">好きな理由</p>
                     <p class="detail__message">
                       <%= @favorite_thing.reason %>

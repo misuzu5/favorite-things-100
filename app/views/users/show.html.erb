@@ -104,13 +104,12 @@
           </h2>
 
           <div class="user__list">
-            <% @titles.each_with_index do |title, i| %>
+            <% @favorite_things.each_with_index do |favorite_thing, i| %>
               <table class="list">
                 <tbody>
                   <tr>
                     <td class="list__col1"><%= i+1 %></td>
-                    <td class="list__col2"><%= link_to title, favorite_thing_path(@favorite_things), class: :lists__title%>
-</td>
+                    <td class="list__col2"><%= link_to favorite_thing.title, favorite_thing_path(favorite_thing), class: :lists__title%></td>
                   </tr>
                 </tbody>
               </table>
