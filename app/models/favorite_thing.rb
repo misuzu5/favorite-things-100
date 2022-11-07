@@ -8,8 +8,9 @@ class FavoriteThing < ApplicationRecord
 
   with_options presence: true do
     validates :title
-    validates :reason
-    validates :episode
+    validates :reason1
+    validates :reason2
+    validates :reason3
     validates :image
   end
 

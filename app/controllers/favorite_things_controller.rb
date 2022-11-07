@@ -51,7 +51,7 @@ class FavoriteThingsController < ApplicationController
   private
 
   def favorite_thing_params
-    params.require(:favorite_thing).permit(:title, :type_id, :reason, :emotion, :appeal_point, :episode,
+    params.require(:favorite_thing).permit(:title, :type_id, :reason1, :reason2, :reason3, :episode,
                                            :image).merge(user_id: current_user.id)
   end
 

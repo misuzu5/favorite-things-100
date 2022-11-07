@@ -3,9 +3,10 @@ FactoryBot.define do
     association :user
 
     title          { Faker::Lorem.word }
-    reason         { Faker::Lorem.sentence }
-    emotion        { Faker::Lorem.sentence }
-    appeal_point   { Faker::Lorem.sentence }
+    type_id        { Faker::Number.between(from: 1, to: 3) }
+    reason1        { Faker::Lorem.sentence }
+    reason2        { Faker::Lorem.sentence }
+    reason3        { Faker::Lorem.sentence }
     episode        { Faker::Lorem.sentence }
 
     after(:build) do |favorite_thing|

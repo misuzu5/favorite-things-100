@@ -45,10 +45,10 @@ ActiveRecord::Schema.define(version: 2022_11_04_032624) do
 
   create_table "favorite_things", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title", null: false
-    t.string "reason", null: false
-    t.string "emotion"
-    t.string "appeal_point"
-    t.text "episode", null: false
+    t.string "reason1", null: false
+    t.string "reason2", null: false
+    t.string "reason3", null: false
+    t.text "episode"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

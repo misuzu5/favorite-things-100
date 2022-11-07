@@ -3,7 +3,7 @@
   <div class="card__body">
     <%= link_to favorite_thing.title, favorite_thing_path(favorite_thing), class: :card__title%>
     <p class="card__summary">
-      <%= favorite_thing.reason %>
+      <%= favorite_thing.reason1 %>
     </p>
     <%= link_to "by #{favorite_thing.user.nickname}", user_path(favorite_thing.user), class: :card__user %>
   </div>

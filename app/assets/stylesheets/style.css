@@ -103,6 +103,7 @@ a {
 .form__wrapper {
   min-height: calc(100vh - 220px);
   text-align: center;
+  padding-top: 20px;
   padding-bottom: 5px;
   margin: 50px auto;
   width: auto;

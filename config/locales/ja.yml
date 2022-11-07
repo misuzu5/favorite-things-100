@@ -14,8 +14,9 @@ ja:
       favorite_thing:
         title: 好きなことのタイトル
         type_id: 好きなことのタイプ
-        reason: 好きな理由
-        episode: エピソード
+        reason1: 好きな理由1
+        reason2: 好きな理由2
+        reason3: 好きな理由3
         image: イメージ画像
       comment:
         text: コメント
