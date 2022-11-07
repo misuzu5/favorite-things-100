@@ -1,13 +1,13 @@
 <%= form_with model: @favorite_thing, local: true do |f|%>
   <%= render 'shared/error_messages', model: f.object %>
   <div class="field">
-    <%= f.label :title, "好きなもののタイトル" %>
+    <%= f.label :title, "好きなことのタイトル" %>
       <span class="indispensable">必須</span><br/>
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :title, "好きなもののタイプ" %>
+    <%= f.label :title, "好きなことのタイプ" %>
       <span class="indispensable">必須</span><br/>
     <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"type-select"}) %>
   </div>
