@@ -10,7 +10,7 @@ if (document.URL.match(/sign_up/)){
     }; 
 
     document.getElementById('user_image').addEventListener('change', (e) =>{
-      const imageContent = document.querySelector('img');
+      const imageContent = document.querySelector('#sign-up-image > img');
       if (imageContent){
         imageContent.remove();
       }

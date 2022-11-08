@@ -10,7 +10,7 @@ if (document.URL.match(/new/)){
     }; 
 
     document.getElementById('favorite_thing_image').addEventListener('change', (e) =>{
-      const imageContent = document.querySelector('img');
+      const imageContent = document.querySelector('#new-image > img');
       if (imageContent){
         imageContent.remove();
       }

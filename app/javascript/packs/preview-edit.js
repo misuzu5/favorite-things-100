@@ -10,7 +10,7 @@ if (document.URL.match(/edit/)){
     }; 
 
     document.getElementById('user_image').addEventListener('change', (e) =>{
-      const imageContent = document.querySelector('img');
+      const imageContent = document.querySelector('#edit-image > img');
       if (imageContent){
         imageContent.remove();
       }
