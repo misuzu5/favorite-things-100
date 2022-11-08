@@ -41,11 +41,11 @@ class FavoriteThingsController < ApplicationController
   end
 
   def all
-    @favorite_things = FavoriteThing.includes(:user).order('created_at DESC').page(params[:page]).per(5)
+    @favorite_things = FavoriteThing.includes(:user).order('created_at DESC').page(params[:page]).per(10)
   end
 
   def search
-    @favorite_things = FavoriteThing.search(params[:keyword]).order('created_at DESC').page(params[:page]).per(5)
+    @favorite_things = FavoriteThing.search(params[:keyword]).order('created_at DESC').page(params[:page]).per(10)
   end
 
   private

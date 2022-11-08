@@ -18,7 +18,7 @@ class FavoriteThing < ApplicationRecord
 
   def self.search(search)
     if search != ""
-      FavoriteThing.where('title LIKE(?)', "%#{search}%")
+      FavoriteThing.where(['title LIKE(?) OR reason1 LIKE(?) OR reason2 LIKE(?) OR reason3 LIKE(?)', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%"])
     else
       FavoriteThing.all
     end

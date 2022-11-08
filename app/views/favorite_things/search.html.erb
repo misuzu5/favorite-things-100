@@ -1,15 +1,16 @@
 <main>
-  <div class='favorite-thing-contents'>
-    <div class="subtitle" >
-      検索結果
+  <div class="container">
+    <div class='favorite-thing-contents'>
+      <div class="subtitle" >
+        検索結果
+      </div>
+      <div class='favorite-thing-lists'>
+        <% @favorite_things.each do |favorite_thing| %>
+          <%= render partial: "favorite_thing", locals: { favorite_thing: favorite_thing } %>
+        <% end %>
+      </div>
     </div>
-    <div class="contents row">
-      <% @favorite_things.each do |favorite_thing| %>
-        <%= render partial: "favorite_thing", locals: { favorite_thing: favorite_thing } %>
-      <% end %>
-    </div>
+
+    <%= paginate @favorite_things %>
   </div>
-
-  <%= paginate @favorite_things %>
-
 </main>
