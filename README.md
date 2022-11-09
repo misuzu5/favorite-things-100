@@ -77,6 +77,9 @@ https://favorite-things-100.herokuapp.com/
 
 ## 10.ユーザー情報削除機能
 ## 11.ゲストログイン機能
+![マイページ詳細機能](https://gyazo.com/ba4a4d90f9685290672ff5228f5ee64a
+.gif)
+
 
 ※	実装した機能について、それぞれどのような特徴があるのかを列挙する形で記載。画像はGyazoで、GIFはGyazoGIFで撮影すること。
 
