@@ -48,16 +48,16 @@ https://favorite-things-100.herokuapp.com/
 
 # 実装した機能についての画像やGIFおよびその説明
 ## 1.トップページ
-![トップページ](https://gyazo.com/9327c69e26356d4bce68f040b12cc90a.gif)
+![トップページ](https://gyazo.com/ebff6b881acb58333c443b8546107683.gif)
 
 ## 2.ユーザー登録機能
 ![ユーザー登録機能](https://gyazo.com/b53f047ba13595c84c48b603872b2cb1.gif)
 
 ## 3.好きなこと投稿機能
-![好きなこと投稿機能](https://gyazo.com/0af16a1a27fd854088ba5ced5532de9c.gif)
+![好きなこと投稿機能](https://gyazo.com/bd4759460b7823f49311023bf98ec1c3.gif)
 
 ## ４.好きなこと編集機能
-![好きなこと編集機能](https://gyazo.com/5165ab10e556953125a8c73c819b0a68.gif)
+![好きなこと編集機能](https://gyazo.com/fe7cc9dcc957d4b497b9d0bb480dd939.gif)
 
 ## 5.好きなこと削除機能
 ![好きなこと削除機能](https://gyazo.com/ab1323249316598c909a321cd65745ec.gif)
@@ -69,19 +69,14 @@ https://favorite-things-100.herokuapp.com/
 ## 7.コメント投稿機能
 ![コメント投稿機能](https://gyazo.com/65f8c6a13820cc8e6e138c5360356048.gif)
 
-## 8.
-## 9.
-## 10.
-## 11.マイページ詳細機能
-## 12.ユーザー情報編集機能
-## 13.ユーザー情報削除機能
-## 14.ゲストログイン機能
-## 11.
-## 11.
+## 8.マイページ詳細機能
+![マイページ詳細機能](https://gyazo.com/850657c275d53ad25ff47cc91e1573f7.gif)
 
+## 9.ユーザー情報編集機能
+![マイページ詳細機能](https://gyazo.com/0800490c31002ac0149a597e98d472f0.gif)
 
-
-
+## 10.ユーザー情報削除機能
+## 11.ゲストログイン機能
 
 ※	実装した機能について、それぞれどのような特徴があるのかを列挙する形で記載。画像はGyazoで、GIFはGyazoGIFで撮影すること。
 
