@@ -77,7 +77,7 @@ https://favorite-things-100.herokuapp.com/
 ## 7.コメント投稿機能
 他者の投稿にコメントすることができます。  
 コメントは投稿日時が新しいものが上から順に表示されます。
-![コメント投稿機能](https://gyazo.com/65f8c6a13820cc8e6e138c5360356048.gif)
+![コメント投稿機能](https://gyazo.com/42502d88f61e13ddc5aee18e7e5a4cec.gif)
 
 ## 8.マイページ詳細機能
 ユーザーの情報が表示されます。  
@@ -104,7 +104,7 @@ https://favorite-things-100.herokuapp.com/
 - コメント投稿 非同期通信(Ajax)
 - コメント編集・削除機能
 - 自動ログイン(Remember me)機能
-- APIログイン
+- APIログイン機能
 - マインドマップ作成
 - パンくずリスト機能(gretel)
 - 複数枚画像投稿機能
