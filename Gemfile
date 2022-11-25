@@ -69,3 +69,4 @@ gem 'kaminari'
 gem 'jquery-rails'
 gem 'active_hash'
 gem "chartkick"
+gem 'googleauth'
