@@ -11,7 +11,7 @@
 #
 default: &default
   adapter: mysql2
-  database: favorite-things-100_production
+  database: favorite_things_100_production
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
