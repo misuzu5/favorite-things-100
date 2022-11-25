@@ -11,7 +11,9 @@
 #
 default: &default
   adapter: mysql2
-  database: favorite_things_100_production
+  database: favorite-things-100_production
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
