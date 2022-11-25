@@ -83,17 +83,17 @@
                     <%= "〜#{@user.nickname}さんの分析結果〜" %>
                   </h2>
                   <% if @type_num == 1 %>
-                    <h6> 【1】Thinking・思考タイプ が多いあなたは、</h6>
+                    <h6> 【1】Thinking・思考タイプ が多い<%= "#{@user.nickname}さん" %>は、</h6>
                     <br>
                     <h4>研究職やコンサルタントに向いています！</h4>
                   <% elsif @type_num == 2 %>
                     <h4></h4>
-                    <h6> 【2】Communication・コミュニケーションタイプ が多いあなたは、</h6>
+                    <h6> 【2】Communication・コミュニケーションタイプ が多い<%= "#{@user.nickname}さん" %>は、</h6>
                     <br>
                     <h4>営業職や接客業に向いています！</h4>
                   <% elsif @type_num == 3 %>
                     <h4></h4>
-                    <h6> 【3】Leadership・リーダータイプ が多いあなたは、</h6>
+                    <h6> 【3】Leadership・リーダータイプ が多い<%= "#{@user.nickname}さん" %>は、</h6>
                     <br>
                     <h4>経営者や管理職に向いています！</h4>
                   <% else %>

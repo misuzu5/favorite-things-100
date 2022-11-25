@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'google_login_api/callback'
+  post '/google_login_api/callback', to: 'google_login_api#callback'
+
   devise_for :users, controllers: {
     sessions: "users/sessions",
     registrations: "users/registrations"
